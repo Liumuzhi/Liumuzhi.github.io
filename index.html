@@ -78,6 +78,86 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/10/09/hexo/" title="Github Pages和Hexo搭静态博客" itemprop="url">Github Pages和Hexo搭静态博客</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-09T13:58:56.294Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>[toc]</p>
+<h2 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h2><ul>
+<li>git</li>
+<li>nodejs</li>
+<li>npm<br>是否安装成功命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git -v</div><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">npm install hexo --save</div></pre></td></tr></table></figure>
+<h2 id="安装hexo插件"><a href="#安装hexo插件" class="headerlink" title="安装hexo插件"></a>安装hexo插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><p>进入目标文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+<p>此时，目标文件夹下就会有新建的所需文件。</p>
+<h2 id="查看本地效果"><a href="#查看本地效果" class="headerlink" title="查看本地效果"></a>查看本地效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure>
+<p>登陆localhost:4000，即可查看本地的效果。<br>现在本地的博客已经搭建起来，接着我们将其部署到github上</p>
+<h2 id="新建username-github-io"><a href="#新建username-github-io" class="headerlink" title="新建username.github.io"></a>新建username.github.io</h2><p>在github上新建仓库，名为username.github.io</p>
+<h2 id="修改全局-config-yml文件"><a href="#修改全局-config-yml文件" class="headerlink" title="修改全局_config.yml文件"></a>修改全局_config.yml文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
+<p><img src="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png" alt=""></p>
+<h2 id="查看远程效果"><a href="#查看远程效果" class="headerlink" title="查看远程效果"></a>查看远程效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>或者直接执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div></pre></td></tr></table></figure></p>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes</div><div class="line">git clone https://github.com/wuchong/jacman.git themes/jacman</div></pre></td></tr></table></figure>
+<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/jacman</div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
+<p>请先备份您主题目录下的 _config.yml 文件后再升级。</p>
+<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>修改全局配置文件_config.yml，修改theme名。<br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" title="Jacman作者" target="_blank" rel="external">如何使用Jacman主题</a></p>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p>更新主题：</p>
+<blockquote>
+<p>hexo clean;hexo g;hexo d</p>
+</blockquote>
+<p>更新文章：</p>
+<blockquote>
+<p>henxo g;hexo d</p>
+</blockquote>
+<p>tags: github</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/10/09/XML/" title="XML" itemprop="url">XML</a>
   </h1>
   <p class="article-author">By
@@ -241,77 +321,6 @@
 <p>A common use of JSON is to read data from a web server, and display the data in a web page.<br>For simplicity, this can be demonstrated by using a string as input (instead of a file).<br><strong>The JavaScript function JSON.parse(text) can be used to convert a JSON text into a JavaScript object.</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;h2&gt;Create Object from JSON String&lt;/h2&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var text = &apos;&#123;&quot;employees&quot;:[&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot; &#125;,&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;Anna&quot;,&quot;lastName&quot;:&quot;Smith&quot; &#125;,&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;Peter&quot;,&quot;lastName&quot;:&quot;Jones&quot; &#125;]&#125;&apos;;</div><div class="line"></div><div class="line">obj = JSON.parse(text);</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">obj.employees[1].firstName + &quot; &quot; + obj.employees[1].lastName;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>tags: front-end</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/10/09/hexo/" title="Github Pages和Hexo搭静态博客" itemprop="url">Github Pages和Hexo搭静态博客</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
-		
-  <p class="article-time">
-    <time datetime="2016-10-09T08:57:57.098Z" itemprop="datePublished"> 发表于 2016-10-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h2><ul>
-<li>git</li>
-<li>nodejs</li>
-<li>npm<br>是否安装成功命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git -v</div><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">npm install hexo --save</div></pre></td></tr></table></figure>
-<h2 id="安装hexo插件"><a href="#安装hexo插件" class="headerlink" title="安装hexo插件"></a>安装hexo插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><p>进入目标文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
-<p>此时，目标文件夹下就会有新建的所需文件。</p>
-<h2 id="查看本地效果"><a href="#查看本地效果" class="headerlink" title="查看本地效果"></a>查看本地效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure>
-<p>登陆localhost:4000，即可查看本地的效果。<br>现在本地的博客已经搭建起来，接着我们将其部署到github上</p>
-<h2 id="新建username-github-io"><a href="#新建username-github-io" class="headerlink" title="新建username.github.io"></a>新建username.github.io</h2><p>在github上新建仓库，名为username.github.io</p>
-<h2 id="修改全局-config-yml文件"><a href="#修改全局-config-yml文件" class="headerlink" title="修改全局_config.yml文件"></a>修改全局_config.yml文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
-<p><img src="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png" alt=""></p>
-<h2 id="查看远程效果"><a href="#查看远程效果" class="headerlink" title="查看远程效果"></a>查看远程效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>或者直接执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div></pre></td></tr></table></figure></p>
-<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes</div><div class="line">git clone https://github.com/wuchong/jacman.git themes/jacman</div></pre></td></tr></table></figure>
-<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/jacman</div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
-<p>请先备份您主题目录下的 _config.yml 文件后再升级。</p>
-<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>修改全局配置文件_config.yml，修改theme名。<br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" title="Jacman作者" target="_blank" rel="external">如何使用Jacman主题</a></p>
-<p>tags: github</p>
 
         
         
