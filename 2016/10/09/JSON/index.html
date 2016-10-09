@@ -4,52 +4,53 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Github Pages和Hexo搭静态博客 | Deep Thinking</title>
+    <title>JSON | Deep Thinking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Liu muzhi">
     
 
     
-    <meta name="description" content="所需工具
-git
-nodejs
-npm是否安装成功命令：123git -vnode -vnpm -v
+    <meta name="description" content="[toc]
+Intro
+What is JSON?
+
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is language independent *
+JSON is “self-describing” and easy to understand
 
 
-安装hexo12npm install hexo-cli -gnpm install hexo --save
-安装hexo插件12npm installnpm install hexo-deployer-git --save
-hexo初始化进入目标文件夹1hexo init
-此时，目标文件夹下">
+在编">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github Pages和Hexo搭静态博客">
-<meta property="og:url" content="http://yoursite.com/2016/10/09/hexo/index.html">
+<meta property="og:title" content="JSON">
+<meta property="og:url" content="http://yoursite.com/2016/10/09/JSON/index.html">
 <meta property="og:site_name" content="Deep Thinking">
-<meta property="og:description" content="所需工具
-git
-nodejs
-npm是否安装成功命令：123git -vnode -vnpm -v
+<meta property="og:description" content="[toc]
+Intro
+What is JSON?
+
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is language independent *
+JSON is “self-describing” and easy to understand
 
 
-安装hexo12npm install hexo-cli -gnpm install hexo --save
-安装hexo插件12npm installnpm install hexo-deployer-git --save
-hexo初始化进入目标文件夹1hexo init
-此时，目标文件夹下">
-<meta property="og:image" content="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png">
-<meta property="og:updated_time" content="2016-10-09T08:57:57.098Z">
+在编">
+<meta property="og:updated_time" content="2016-10-09T13:15:36.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github Pages和Hexo搭静态博客">
-<meta name="twitter:description" content="所需工具
-git
-nodejs
-npm是否安装成功命令：123git -vnode -vnpm -v
+<meta name="twitter:title" content="JSON">
+<meta name="twitter:description" content="[toc]
+Intro
+What is JSON?
+
+JSON stands for JavaScript Object Notation
+JSON is a lightweight data-interchange format
+JSON is language independent *
+JSON is “self-describing” and easy to understand
 
 
-安装hexo12npm install hexo-cli -gnpm install hexo --save
-安装hexo插件12npm installnpm install hexo-deployer-git --save
-hexo初始化进入目标文件夹1hexo init
-此时，目标文件夹下">
-<meta name="twitter:image" content="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png">
+在编">
 
     
     <link rel="alternative" href="/atom.xml" title="Deep Thinking" type="application/atom+xml">
@@ -109,14 +110,14 @@ hexo初始化进入目标文件夹1hexo init
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/09/hexo/" title="Github Pages和Hexo搭静态博客" itemprop="url">Github Pages和Hexo搭静态博客</a>
+      <a href="/2016/10/09/JSON/" title="JSON" itemprop="url">JSON</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-09T08:57:57.098Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    <time datetime="2016-10-09T13:15:36.617Z" itemprop="datePublished"> 发表于 2016-10-09</time>
     
   </p>
 </header>
@@ -125,32 +126,70 @@ hexo初始化进入目标文件夹1hexo init
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#所需工具"><span class="toc-number">1.</span> <span class="toc-text">所需工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo插件"><span class="toc-number">3.</span> <span class="toc-text">安装hexo插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-number">4.</span> <span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看本地效果"><span class="toc-number">5.</span> <span class="toc-text">查看本地效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新建username-github-io"><span class="toc-number">6.</span> <span class="toc-text">新建username.github.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改全局-config-yml文件"><span class="toc-number">7.</span> <span class="toc-text">修改全局_config.yml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看远程效果"><span class="toc-number">8.</span> <span class="toc-text">查看远程效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载主题"><span class="toc-number">9.</span> <span class="toc-text">下载主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新主题"><span class="toc-number">10.</span> <span class="toc-text">更新主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置主题"><span class="toc-number">11.</span> <span class="toc-text">配置主题</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON-vs-XML"><span class="toc-number">2.</span> <span class="toc-text">JSON vs XML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Syntax"><span class="toc-number">3.</span> <span class="toc-text">Syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-To"><span class="toc-number">4.</span> <span class="toc-text">How To</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h2><ul>
-<li>git</li>
-<li>nodejs</li>
-<li>npm<br>是否安装成功命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git -v</div><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
-</li>
+		<p>[toc]</p>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><blockquote>
+<p>What is JSON?</p>
+<ul>
+<li>JSON stands for JavaScript Object Notation</li>
+<li>JSON is a lightweight data-interchange format</li>
+<li>JSON is language independent *</li>
+<li>JSON is “self-describing” and easy to understand</li>
 </ul>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">npm install hexo --save</div></pre></td></tr></table></figure>
-<h2 id="安装hexo插件"><a href="#安装hexo插件" class="headerlink" title="安装hexo插件"></a>安装hexo插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><p>进入目标文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
-<p>此时，目标文件夹下就会有新建的所需文件。</p>
-<h2 id="查看本地效果"><a href="#查看本地效果" class="headerlink" title="查看本地效果"></a>查看本地效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure>
-<p>登陆localhost:4000，即可查看本地的效果。<br>现在本地的博客已经搭建起来，接着我们将其部署到github上</p>
-<h2 id="新建username-github-io"><a href="#新建username-github-io" class="headerlink" title="新建username.github.io"></a>新建username.github.io</h2><p>在github上新建仓库，名为username.github.io</p>
-<h2 id="修改全局-config-yml文件"><a href="#修改全局-config-yml文件" class="headerlink" title="修改全局_config.yml文件"></a>修改全局_config.yml文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
-<p><img src="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png" alt=""></p>
-<h2 id="查看远程效果"><a href="#查看远程效果" class="headerlink" title="查看远程效果"></a>查看远程效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>或者直接执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div></pre></td></tr></table></figure></p>
-<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes</div><div class="line">git clone https://github.com/wuchong/jacman.git themes/jacman</div></pre></td></tr></table></figure>
-<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/jacman</div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
-<p>请先备份您主题目录下的 _config.yml 文件后再升级。</p>
-<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>修改全局配置文件_config.yml，修改theme名。<br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" title="Jacman作者" target="_blank" rel="external">如何使用Jacman主题</a></p>
-<p>tags: github</p>
+</blockquote>
+<p>在编程语言中object指代的是一个实体，这个实体有属性和方法。<br>一个人就是一个实体，它的属性有身高，体重，性别等。</p>
+<blockquote>
+<p>JSON uses JavaScript syntax, but the JSON format is text only, just like XML.<br>Text can be read and used as a data format by any programming language.</p>
+</blockquote>
+<h2 id="JSON-vs-XML"><a href="#JSON-vs-XML" class="headerlink" title="JSON vs XML"></a>JSON vs XML</h2><hr>
+<p>JSON和XML都是一种文本格式，可以用来存储和交换数据。</p>
+<blockquote>
+<p>JSON is an easier-to-use alternative to XML.</p>
+</blockquote>
+<p>区别：</p>
+<ul>
+<li>JSON没有结束标签</li>
+<li>JSON更简单易读</li>
+<li>JSON可以使用数组</li>
+</ul>
+<hr>
+<p>Why JSON?</p>
+<blockquote>
+<p>For AJAX applications, JSON is faster and easier than XML:</p>
+</blockquote>
+<p>Using XML </p>
+<ul>
+<li>Fetch an XML document</li>
+<li>Use the XML DOM to loop through the document</li>
+<li>Extract values and store in variables</li>
+</ul>
+<p>Using JSON</p>
+<ul>
+<li>Fetch a JSON string</li>
+<li>JSON.Parse the JSON string</li>
+</ul>
+<hr>
+<p>JSON Example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;&quot;employees&quot;:[</div><div class="line">    &#123;&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;&#125;,</div><div class="line">    &#123;&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;&#125;,</div><div class="line">    &#123;&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;&#125;</div><div class="line">]&#125;</div></pre></td></tr></table></figure></p>
+<p>XML Example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;employees&gt;</div><div class="line">    &lt;employee&gt;</div><div class="line">        &lt;firstName&gt;John&lt;/firstName&gt; &lt;lastName&gt;Doe&lt;/lastName&gt;</div><div class="line">    &lt;/employee&gt;</div><div class="line">    &lt;employee&gt;</div><div class="line">        &lt;firstName&gt;Anna&lt;/firstName&gt; &lt;lastName&gt;Smith&lt;/lastName&gt;</div><div class="line">    &lt;/employee&gt;</div><div class="line">    &lt;employee&gt;</div><div class="line">        &lt;firstName&gt;Peter&lt;/firstName&gt; &lt;lastName&gt;Jones&lt;/lastName&gt;</div><div class="line">    &lt;/employee&gt;</div><div class="line">&lt;/employees&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h2><blockquote>
+<p>JSON syntax is derived from JavaScript object notation syntax:</p>
+<ul>
+<li>Data is in name/value pairs</li>
+<li>Data is separated by commas</li>
+<li>Curly braces hold objects</li>
+<li>Square brackets hold arrays</li>
+</ul>
+</blockquote>
+<p>data的集合是object<br>object的集合是array</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&quot;name1&quot;:&quot;value1&quot;,&quot;name2&quot;:&quot;value2&quot;&#125;</div></pre></td></tr></table></figure>
+<h2 id="How-To"><a href="#How-To" class="headerlink" title="How To"></a>How To</h2><p>用法：</p>
+<blockquote>
+<p>A common use of JSON is to read data from a web server, and display the data in a web page.<br>For simplicity, this can be demonstrated by using a string as input (instead of a file).<br><strong>The JavaScript function JSON.parse(text) can be used to convert a JSON text into a JavaScript object.</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;h2&gt;Create Object from JSON String&lt;/h2&gt;</div><div class="line"></div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var text = &apos;&#123;&quot;employees&quot;:[&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot; &#125;,&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;Anna&quot;,&quot;lastName&quot;:&quot;Smith&quot; &#125;,&apos; +</div><div class="line">&apos;&#123;&quot;firstName&quot;:&quot;Peter&quot;,&quot;lastName&quot;:&quot;Jones&quot; &#125;]&#125;&apos;;</div><div class="line"></div><div class="line">obj = JSON.parse(text);</div><div class="line">document.getElementById(&quot;demo&quot;).innerHTML =</div><div class="line">obj.employees[1].firstName + &quot; &quot; + obj.employees[1].lastName;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>tags: front-end</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -163,7 +202,7 @@ hexo初始化进入目标文件夹1hexo init
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/10/09/hexo/" data-title="Github Pages和Hexo搭静态博客 | Deep Thinking" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/10/09/JSON/" data-title="JSON | Deep Thinking" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -177,18 +216,18 @@ hexo初始化进入目标文件夹1hexo init
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/10/09/JSON/" title="JSON">
+ <a href="/2016/10/09/XML/" title="XML">
   <strong>上一篇：</strong><br/>
   <span>
-  JSON</span>
+  XML</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/10/09/markdown/"  title="markdown">
+<a href="/2016/10/09/hexo/"  title="Github Pages和Hexo搭静态博客">
  <strong>下一篇：</strong><br/> 
- <span>markdown
+ <span>Github Pages和Hexo搭静态博客
 </span>
 </a>
 </div>
@@ -203,7 +242,7 @@ hexo初始化进入目标文件夹1hexo init
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#所需工具"><span class="toc-number">1.</span> <span class="toc-text">所需工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo插件"><span class="toc-number">3.</span> <span class="toc-text">安装hexo插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-number">4.</span> <span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看本地效果"><span class="toc-number">5.</span> <span class="toc-text">查看本地效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新建username-github-io"><span class="toc-number">6.</span> <span class="toc-text">新建username.github.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改全局-config-yml文件"><span class="toc-number">7.</span> <span class="toc-text">修改全局_config.yml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看远程效果"><span class="toc-number">8.</span> <span class="toc-text">查看远程效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载主题"><span class="toc-number">9.</span> <span class="toc-text">下载主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新主题"><span class="toc-number">10.</span> <span class="toc-text">更新主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置主题"><span class="toc-number">11.</span> <span class="toc-text">配置主题</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON-vs-XML"><span class="toc-number">2.</span> <span class="toc-text">JSON vs XML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Syntax"><span class="toc-number">3.</span> <span class="toc-text">Syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-To"><span class="toc-number">4.</span> <span class="toc-text">How To</span></a></li></ol>
  
   </div>
 
