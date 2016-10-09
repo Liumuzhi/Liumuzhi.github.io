@@ -4,62 +4,68 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>linux命令行 | Deep Thinking</title>
+    <title>jQuery | Deep Thinking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Liu muzhi">
     
 
     
-    <meta name="description" content="[toc]
-bash命令
-==uname -aShow system and kernel==
-==whoamiShow your username==
-mountShow mounted filesystems
+    <meta name="description" content="[TOC]
+1. 介绍What is jQuery?
 
-前台后台 fg/bg有些命令执行很花时间，我们可以将其放在后台执行。
+jQuery is a lightweight, “write less, do more”, JavaScript library.
 
-在命令的结尾加上&amp;amp;
-执行完命令后，输入ctrl+z或者bg
+jQuery库包含以下功能：
 
-如何将后台程序调入前台呢？
 
-执行命令jo">
+HTML 元素选取
+HTML 元素操作
+CSS 操作
+HTML 事件函数
+JavaScript 特效和动画
+HTML DOM 遍历和修改
+AJAX
+Utilities">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux命令行">
-<meta property="og:url" content="http://yoursite.com/2016/10/09/linux_command/index.html">
+<meta property="og:title" content="jQuery">
+<meta property="og:url" content="http://yoursite.com/2016/10/09/jQuery/index.html">
 <meta property="og:site_name" content="Deep Thinking">
-<meta property="og:description" content="[toc]
-bash命令
-==uname -aShow system and kernel==
-==whoamiShow your username==
-mountShow mounted filesystems
+<meta property="og:description" content="[TOC]
+1. 介绍What is jQuery?
 
-前台后台 fg/bg有些命令执行很花时间，我们可以将其放在后台执行。
+jQuery is a lightweight, “write less, do more”, JavaScript library.
 
-在命令的结尾加上&amp;amp;
-执行完命令后，输入ctrl+z或者bg
+jQuery库包含以下功能：
 
-如何将后台程序调入前台呢？
 
-执行命令jo">
-<meta property="og:updated_time" content="2016-10-09T08:18:53.083Z">
+HTML 元素选取
+HTML 元素操作
+CSS 操作
+HTML 事件函数
+JavaScript 特效和动画
+HTML DOM 遍历和修改
+AJAX
+Utilities">
+<meta property="og:updated_time" content="2016-10-09T08:25:20.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux命令行">
-<meta name="twitter:description" content="[toc]
-bash命令
-==uname -aShow system and kernel==
-==whoamiShow your username==
-mountShow mounted filesystems
+<meta name="twitter:title" content="jQuery">
+<meta name="twitter:description" content="[TOC]
+1. 介绍What is jQuery?
 
-前台后台 fg/bg有些命令执行很花时间，我们可以将其放在后台执行。
+jQuery is a lightweight, “write less, do more”, JavaScript library.
 
-在命令的结尾加上&amp;amp;
-执行完命令后，输入ctrl+z或者bg
+jQuery库包含以下功能：
 
-如何将后台程序调入前台呢？
 
-执行命令jo">
+HTML 元素选取
+HTML 元素操作
+CSS 操作
+HTML 事件函数
+JavaScript 特效和动画
+HTML DOM 遍历和修改
+AJAX
+Utilities">
 
     
     <link rel="alternative" href="/atom.xml" title="Deep Thinking" type="application/atom+xml">
@@ -119,14 +125,14 @@ mountShow mounted filesystems
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/09/linux_command/" title="linux命令行" itemprop="url">linux命令行</a>
+      <a href="/2016/10/09/jQuery/" title="jQuery" itemprop="url">jQuery</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-09T08:18:53.083Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    <time datetime="2016-10-09T08:25:20.196Z" itemprop="datePublished"> 发表于 2016-10-09</time>
     
   </p>
 </header>
@@ -135,71 +141,149 @@ mountShow mounted filesystems
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bash命令"><span class="toc-number">1.</span> <span class="toc-text">bash命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前台后台-fg-bg"><span class="toc-number">2.</span> <span class="toc-text">前台后台 fg/bg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程"><span class="toc-number">3.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杀死进程"><span class="toc-number">4.</span> <span class="toc-text">杀死进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找命令"><span class="toc-number">5.</span> <span class="toc-text">查找命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令列表"><span class="toc-number">6.</span> <span class="toc-text">命令列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道命令"><span class="toc-number">7.</span> <span class="toc-text">管道命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向"><span class="toc-number">8.</span> <span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件操作"><span class="toc-number">9.</span> <span class="toc-text">文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-number">10.</span> <span class="toc-text">grep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bash变量"><span class="toc-number">11.</span> <span class="toc-text">bash变量</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-介绍"><span class="toc-number">1.</span> <span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-语法"><span class="toc-number">2.</span> <span class="toc-text">2. 语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-选择器"><span class="toc-number">3.</span> <span class="toc-text">3. 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-事件"><span class="toc-number">4.</span> <span class="toc-text">4. 事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-事件效果"><span class="toc-number">5.</span> <span class="toc-text">5. 事件效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-获取-控制-内容和属性"><span class="toc-number">6.</span> <span class="toc-text">6. 获取/控制 内容和属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-jQuery-AJAX"><span class="toc-number">7.</span> <span class="toc-text">7. jQuery-AJAX</span></a></li></ol>
 		
 		</div>
 		
-		<p>[toc]</p>
-<h3 id="bash命令"><a href="#bash命令" class="headerlink" title="bash命令"></a>bash命令</h3><ul>
-<li>==<code>uname -a</code>Show system and kernel==</li>
-<li>==<code>whoami</code>Show your username==</li>
-<li><code>mount</code>Show mounted filesystems</li>
-</ul>
-<h3 id="前台后台-fg-bg"><a href="#前台后台-fg-bg" class="headerlink" title="前台后台 fg/bg"></a>前台后台 fg/bg</h3><p>有些命令执行很花时间，我们可以将其放在后台执行。</p>
+		<p>[TOC]</p>
+<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h2><p>What is jQuery?</p>
+<blockquote>
+<p>jQuery is a lightweight, “write less, do more”, JavaScript library.</p>
+</blockquote>
+<p>jQuery库包含以下功能：</p>
+<blockquote>
 <ul>
-<li>在命令的结尾加上<code>&amp;</code></li>
-<li>执行完命令后，输入<code>ctrl+z</code>或者<code>bg</code></li>
+<li>HTML 元素选取</li>
+<li>HTML 元素操作</li>
+<li>CSS 操作</li>
+<li>HTML 事件函数</li>
+<li>JavaScript 特效和动画</li>
+<li>HTML DOM 遍历和修改</li>
+<li>AJAX</li>
+<li>Utilities</li>
 </ul>
-<p>如何将后台程序调入前台呢？</p>
+</blockquote>
+<p>Why jQuery?</p>
+<blockquote>
+<p>There are lots of other JavaScript frameworks out there, but jQuery seems to be the most popular, and also the most extendable.</p>
+</blockquote>
+<h2 id="2-语法"><a href="#2-语法" class="headerlink" title="2. 语法"></a>2. 语法</h2><p>jQuery Syntax</p>
+<blockquote>
+<p>The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).</p>
+<p>Basic syntax is: $(selector).action()</p>
 <ul>
-<li>执行命令<code>jobs</code>，列出所有后台命令</li>
-<li>fg %进程id,eg:<code>fg %2</code></li>
+<li>A $ sign to define/access jQuery</li>
+<li>A (selector) to “query (or find)” HTML elements</li>
+<li>A jQuery action() to be performed on the element(s)</li>
 </ul>
-<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><ul>
-<li><code>ps</code>最基础的浏览进程的命令。常用的是<code>ps -aux</code></li>
-<li><code>pstree</code>每个进程都是由父进程创建的，可视化显示进程间的关系。指定了进程号，那么根进程就是该进程。没有指定，根进程是<code>init</code>，pid=1</li>
-<li><code>top</code>实时显示系统的进程状态</li>
-<li><code>ps</code> Show snapshot of processes</li>
-<li><code>top</code> Show real time processes</li>
-<li><code>kill pid</code> Kill process with id pid</li>
-<li>==<code>pkill name</code> Kill process with name name==</li>
-<li>==<code>killall name</code> Kill all processes with names beginning name==</li>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(this).hide() - hides the current element.</div><div class="line">$(&quot;p&quot;).hide() - hides all &lt;p&gt; elements.</div><div class="line">$(&quot;.test&quot;).hide() - hides all elements with class=&quot;test&quot;.</div><div class="line">$(&quot;#test&quot;).hide() - hides the element with id=&quot;test&quot;.</div></pre></td></tr></table></figure>
+<h2 id="3-选择器"><a href="#3-选择器" class="headerlink" title="3. 选择器"></a>3. 选择器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;button&quot;).click(function()&#123;</div><div class="line">        $(&quot;p&quot;).hide();</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$(&quot;*&quot;)</code></td>
+<td>Selects all elements</td>
+</tr>
+<tr>
+<td><code>$(this)</code></td>
+<td>Selects the current HTML element</td>
+</tr>
+<tr>
+<td><code>$(document)</code></td>
+<td>Selects the current HTML document</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-事件"><a href="#4-事件" class="headerlink" title="4. 事件"></a>4. 事件</h2><p>What are Events?</p>
+<blockquote>
+<p>All the different <em><strong>visitor’s actions</strong></em> that a <em><strong>web page can respond</strong></em> to are called events.</p>
+</blockquote>
+<p>An event represents the precise moment when something happens.</p>
+<p>The term <strong>“fires/fired”</strong> is often used with events. Example: “The keypress event is fired, the moment you press a key”.</p>
+<table>
+<thead>
+<tr>
+<th>Mouse Events</th>
+<th>Keyboard Events</th>
+<th>Form Events</th>
+<th>Document/Window Events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>click</td>
+<td>keypress</td>
+<td>submit</td>
+<td>load</td>
+</tr>
+<tr>
+<td>dblclick</td>
+<td>keydown</td>
+<td>change</td>
+<td>resize</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>keyup</td>
+<td>focus</td>
+<td>scroll</td>
+</tr>
+<tr>
+<td>mouseleave</td>
+<td></td>
+<td>blur</td>
+<td>unload</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-事件效果"><a href="#5-事件效果" class="headerlink" title="5. 事件效果"></a>5. 事件效果</h2><ul>
+<li>hide/show</li>
+<li>fade</li>
+<li>slide</li>
+<li>animate</li>
+<li>stop</li>
+<li>callback</li>
+<li>chaining</li>
 </ul>
-<h3 id="杀死进程"><a href="#杀死进程" class="headerlink" title="杀死进程"></a>杀死进程</h3><ul>
-<li><code>kill pid</code>杀死某个进程</li>
-<li><code>kill -9 pid</code>强制杀死。慎用。没有机会清理现场，比如，文件可能没有写完</li>
+<h2 id="6-获取-控制-内容和属性"><a href="#6-获取-控制-内容和属性" class="headerlink" title="6. 获取/控制 内容和属性"></a>6. 获取/控制 内容和属性</h2><p>jQuery DOM 操作</p>
+<blockquote>
+<p>jQuery 中非常重要的部分，就是操作 DOM 的能力。<br>jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。</p>
+<p>DOM = Document Object Model（文档对象模型）</p>
+</blockquote>
+<p>我们可以获取一些元素的内容或者属性。<br>我们也可以增加、删除、修改这些属性。</p>
+<h2 id="7-jQuery-AJAX"><a href="#7-jQuery-AJAX" class="headerlink" title="7. jQuery-AJAX"></a>7. jQuery-AJAX</h2><p>什么是 AJAX？</p>
+<blockquote>
+<p>AJAX = 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。<br>简短地说，在不重载整个网页的情况下，AJAX通过后台加载数据，并在网页上进行显示。<br>使用 AJAX 的应用程序案例：谷歌地图、腾讯微博、优酷视频、人人网等等。</p>
+</blockquote>
+<p>关于 jQuery 与 AJAX</p>
+<blockquote>
+<p>jQuery 提供多个与 AJAX 有关的方法。<br>通过 jQuery AJAX 方法，您能够使用 HTTP Get 和 HTTP Post 从远程服务器上请求文本、HTML、XML 或 JSON - 同时您能够把这些外部数据直接载入网页的被选元素中。</p>
+</blockquote>
+<ul>
+<li><p><code>load()</code> 方法</p>
+<blockquote>
+<p>jQuery load() 方法是简单但强大的 AJAX 方法。<br>load() 方法从服务器加载数据，并把返回的数据放入被选元素中。</p>
+</blockquote>
+</li>
+<li><p><code>$.get()</code>方法</p>
+<blockquote>
+<p>$.get() 方法通过 HTTP GET 请求从服务器上请求数据。</p>
+</blockquote>
+</li>
+<li><p><code>$.post()</code> 方法</p>
+<blockquote>
+<p>$.post() 方法通过 HTTP POST 请求从服务器上请求数据。</p>
+</blockquote>
+</li>
 </ul>
-<h3 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h3><ul>
-<li>==<code>find</code>最强大的查找命令。格式：<code>find &lt;指定目录&gt; &lt;指定条件&gt; &lt;指定动作&gt;</code>。举例：<code>find . -name &#39;my*&#39; -ls</code>==</li>
-<li>==<code>locate</code>查找速度比<code>find</code>快，但是查找不到最近更新的文件，可以预先执行<code>updatedb</code>。eg:<code>locate /etc/sh</code>搜索etc目录下所有以sh开头的文件。==</li>
-<li><code>which</code>在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。</li>
-</ul>
-<h3 id="命令列表"><a href="#命令列表" class="headerlink" title="命令列表"></a>命令列表</h3><ul>
-<li>==<code>cmd1 ; cmd2</code>Run cmd1 then cmd2==</li>
-<li><code>cmd1 &amp;&amp; cmd2</code>Run cmd2 if cmd1 is successful</li>
-<li><code>cmd1 || cmd2</code>Run cmd2 if cmd1 is not successful</li>
-<li><code>cmd &amp;</code>Run cmd in a subshell</li>
-</ul>
-<h3 id="管道命令"><a href="#管道命令" class="headerlink" title="管道命令"></a>管道命令</h3><ul>
-<li><code>cmd1 | cmd2</code>stdout of cmd1 to cmd2</li>
-<li>==<code>cmd1 |&amp; cmd2</code>stderr of cmd1 to cmd2==</li>
-</ul>
-<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1&gt; ：以覆盖的方法将『正确的数据』输出到指定的文件或装置上；</div><div class="line">1&gt;&gt;：以累加的方法将『正确的数据』输出到指定的文件或装置上；</div><div class="line">2&gt; ：以覆盖的方法将『错误的数据』输出到指定的文件或装置上；</div><div class="line">2&gt;&gt;：以累加的方法将『错误的数据』输出到指定的文件或装置上；</div></pre></td></tr></table></figure>
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul>
-<li><code>touch file</code>Create file</li>
-<li><code>cat file1 file2</code>Concatenate files and output</li>
-<li><code>less file</code>View and paginate file</li>
-<li>==<code>file file</code>Get type of file==</li>
-</ul>
-<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><h3 id="bash变量"><a href="#bash变量" class="headerlink" title="bash变量"></a>bash变量</h3><ul>
-<li>==<code>env</code>Show environment variables==</li>
-<li><code>echo $NAME</code>Output value of $NAME variable</li>
-<li>==<code>export NAME=value</code>Set $NAME to value==</li>
-<li><code>$PATH</code>Executable search path</li>
-<li><code>$HOME</code>Home directory</li>
-<li><code>$SHELL</code>Current shell</li>
-</ul>
-<p>标签：linux</p>
+<p>tags:front-end</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -212,7 +296,7 @@ mountShow mounted filesystems
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/10/09/linux_command/" data-title="linux命令行 | Deep Thinking" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/10/09/jQuery/" data-title="jQuery | Deep Thinking" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -226,18 +310,18 @@ mountShow mounted filesystems
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/10/09/vim-shortcut-md/" title="vim快捷键">
+ <a href="/2016/10/09/bootstrap/" title="bootstrap">
   <strong>上一篇：</strong><br/>
   <span>
-  vim快捷键</span>
+  bootstrap</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/10/09/hello-world/"  title="Hello World">
+<a href="/2016/10/09/vim-shortcut-md/"  title="vim快捷键">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>vim快捷键
 </span>
 </a>
 </div>
@@ -252,7 +336,7 @@ mountShow mounted filesystems
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bash命令"><span class="toc-number">1.</span> <span class="toc-text">bash命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前台后台-fg-bg"><span class="toc-number">2.</span> <span class="toc-text">前台后台 fg/bg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程"><span class="toc-number">3.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杀死进程"><span class="toc-number">4.</span> <span class="toc-text">杀死进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找命令"><span class="toc-number">5.</span> <span class="toc-text">查找命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令列表"><span class="toc-number">6.</span> <span class="toc-text">命令列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道命令"><span class="toc-number">7.</span> <span class="toc-text">管道命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向"><span class="toc-number">8.</span> <span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件操作"><span class="toc-number">9.</span> <span class="toc-text">文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-number">10.</span> <span class="toc-text">grep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bash变量"><span class="toc-number">11.</span> <span class="toc-text">bash变量</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-介绍"><span class="toc-number">1.</span> <span class="toc-text">1. 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-语法"><span class="toc-number">2.</span> <span class="toc-text">2. 语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-选择器"><span class="toc-number">3.</span> <span class="toc-text">3. 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-事件"><span class="toc-number">4.</span> <span class="toc-text">4. 事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-事件效果"><span class="toc-number">5.</span> <span class="toc-text">5. 事件效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-获取-控制-内容和属性"><span class="toc-number">6.</span> <span class="toc-text">6. 获取/控制 内容和属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-jQuery-AJAX"><span class="toc-number">7.</span> <span class="toc-text">7. jQuery-AJAX</span></a></li></ol>
  
   </div>
 

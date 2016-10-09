@@ -78,6 +78,495 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/10/09/markdown/" title="markdown" itemprop="url">markdown</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-09T08:27:43.429Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul>
+<li>#号（一个或者六个）</li>
+<li>===或者—（只能表示H1、H2）</li>
+</ul>
+<h3 id="2-强调"><a href="#2-强调" class="headerlink" title="2.强调"></a>2.强调</h3><ul>
+<li>斜体 用“*”，或者“-”</li>
+<li>粗体 用“**”，或者“–”</li>
+<li>删除线 用“~~”</li>
+</ul>
+<h3 id="3-列表"><a href="#3-列表" class="headerlink" title="3.列表"></a>3.列表</h3><ul>
+<li>有序列表 数字</li>
+<li>无序列表 * - +</li>
+<li>有序和无序可以嵌套<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">1. order1</div><div class="line">    1. suborder1</div><div class="line">        1. subsuborder1</div><div class="line">        2. subsuborder2</div><div class="line">    2. suborder2</div><div class="line">2. order2</div><div class="line">    - subunorder1</div><div class="line">    - subunorder2</div><div class="line">        - subsubunorder1</div><div class="line">        - subsubunorder2</div><div class="line">3. order3</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>order1<ol>
+<li>suborder1<ol>
+<li>subsuborder1</li>
+<li>subsuborder2</li>
+</ol>
+</li>
+<li>suborder2</li>
+</ol>
+</li>
+<li>order2<ul>
+<li>subunorder1</li>
+</ul>
+<ul>
+<li>subunorder2<ul>
+<li>subsubunorder1</li>
+<li>subsubunorder2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>order3</li>
+</ol>
+<h3 id="4-链接"><a href="#4-链接" class="headerlink" title="4.链接"></a>4.链接</h3><p><a href="http://www.google.com" title="谷歌的主页" target="_blank" rel="external">Google</a></p>
+<h3 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h3><p><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="" title="谷歌的图片"></p>
+<h3 id="6-代码和高亮"><a href="#6-代码和高亮" class="headerlink" title="6.代码和高亮"></a>6.代码和高亮</h3><ul>
+<li>一行之内的代码用反引号</li>
+<li>块代码用三个反引号或缩进（建议用反引号）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">"JavaScript syntax highlighting"</span>;</div><div class="line">alert(s);</div></pre></td></tr></table></figure>
+<pre><code>var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">s = <span class="string">"Python syntax highlighting"</span></div><div class="line"><span class="keyword">print</span> s</div></pre></td></tr></table></figure>
+<pre><code>s = &quot;Python syntax highlighting&quot;
+print s
+</code></pre><h3 id="7-表格"><a href="#7-表格" class="headerlink" title="7.表格"></a>7.表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hit    | thu  | mit</div><div class="line">---    | ---  | ---</div><div class="line">normal | good | eccellent</div><div class="line">liu    | mu   | zhi</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>hit</th>
+<th>thu</th>
+<th>mit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>good</td>
+<td>eccellent</td>
+</tr>
+<tr>
+<td>liu</td>
+<td>mu</td>
+<td>zhi</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-引用"><a href="#8-引用" class="headerlink" title="8.引用"></a>8.引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&apos;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.</div></pre></td></tr></table></figure>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let’s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote. </p>
+</blockquote>
+<p>当一行不够长的时候，即使你分为两行，他也会自动合并为一行<br>当一行足够长的时候，他会自动分为多行</p>
+<h3 id="9-插入html"><a href="#9-插入html" class="headerlink" title="9.插入html"></a>9.插入html</h3><p>有道云笔记不支持</p>
+<h3 id="10-水平线"><a href="#10-水平线" class="headerlink" title="10.水平线"></a>10.水平线</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">***</div><div class="line">___</div></pre></td></tr></table></figure>
+<p>连字符、星号、下划线</p>
+<hr>
+<hr>
+<hr>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/09/bootstrap/" title="bootstrap" itemprop="url">bootstrap</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-09T08:26:35.521Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>[TOC]</p>
+<h2 id="1-Bootstrap-包的内容"><a href="#1-Bootstrap-包的内容" class="headerlink" title="1. Bootstrap 包的内容"></a>1. Bootstrap 包的内容</h2><blockquote>
+<ul>
+<li><strong>基本结构</strong>：<br>Bootstrap 提供了一个带有网格系统、链接样式、背景的基本结构。这将在 Bootstrap 基本结构 部分详细讲解。</li>
+<li><strong>CSS</strong>：<br>Bootstrap 自带以下特性：全局的 CSS 设置、定义基本的 HTML 元素样式、可扩展的 class，以及一个先进的网格系统。这将在 Bootstrap CSS 部分详细讲解。</li>
+<li><strong>组件</strong>：<br>Bootstrap包含了十几个可重用的组件，用于创建图像、下拉菜单、导航、警告框、弹出框等等。这将在 布局组件 部分详细讲解。</li>
+<li><strong>JavaScript 插件</strong>：<br>Bootstrap 包含了十几个自定义的jQuery插件。您可以直接包含所有的插件，也可以逐个包含这些插件。这将在 Bootstrap 插件 部分详细讲解。</li>
+<li><strong>定制</strong>：<br>您可以定制 Bootstrap 的组件、LESS 变量和 jQuery 插件来得到您自己的版本。</li>
+</ul>
+</blockquote>
+<h2 id="2-css"><a href="#2-css" class="headerlink" title="2. css"></a>2. css</h2><blockquote>
+<p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
+</blockquote>
+<h3 id="2-1-移动设备优先"><a href="#2-1-移动设备优先" class="headerlink" title="2.1 移动设备优先"></a>2.1 移动设备优先</h3><p>在<code>&lt;head&gt;</code>中添加viewport元数据标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>也可以禁用缩放功能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="2-2-排版与链接"><a href="#2-2-排版与链接" class="headerlink" title="2.2 排版与链接"></a>2.2 排版与链接</h3><p>bootstrap为某些元素设置了基本的（也可以称为默认的）全局样式。</p>
+<blockquote>
+<ul>
+<li>为 body 元素设置 background-color: #fff;</li>
+<li>使用 @font-family-base、@font-size-base 和 @line-height-base a变量作为排版的基本参数</li>
+<li>为所有链接设置了基本颜色 @link-color ，并且当链接处于 :hover 状态时才添加下划线</li>
+</ul>
+</blockquote>
+<h3 id="2-3-布局容器"><a href="#2-3-布局容器" class="headerlink" title="2.3 布局容器"></a>2.3 布局容器</h3><p>元素和栅格系统都是包裹在一个容器内。<br>两个基本的容器。<br>.container 类用于固定宽度并支持响应式布局的容器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  ...</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>.container-fluid 类用于 100% 宽度，占据全部视口（viewport）的容器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container-fluid&quot;&gt;</div><div class="line">  ...</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="2-4-栅格系统"><a href="#2-4-栅格系统" class="headerlink" title="2.4 栅格系统"></a>2.4 栅格系统</h3><blockquote>
+<ul>
+<li>“行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。</li>
+<li>通过“行（row）”在水平方向创建一组“列（column）”。</li>
+<li>你的内容应当放置于“列（column）”内，并且，只有“列（column）”可以作为行（row）”的直接子元素。</li>
+</ul>
+</blockquote>
+<h3 id="2-6-排版"><a href="#2-6-排版" class="headerlink" title="2.6 排版"></a>2.6 排版</h3><h3 id="2-7-代码"><a href="#2-7-代码" class="headerlink" title="2.7 代码"></a>2.7 代码</h3><h3 id="2-8-表格"><a href="#2-8-表格" class="headerlink" title="2.8 表格"></a>2.8 表格</h3><h3 id="2-9-表单"><a href="#2-9-表单" class="headerlink" title="2.9 表单"></a>2.9 表单</h3><h3 id="2-10-按钮"><a href="#2-10-按钮" class="headerlink" title="2.10 按钮"></a>2.10 按钮</h3><h3 id="2-11-图片"><a href="#2-11-图片" class="headerlink" title="2.11 图片"></a>2.11 图片</h3><h2 id="3-组件"><a href="#3-组件" class="headerlink" title="3. 组件"></a>3. 组件</h2><blockquote>
+<p>Over a dozen reusable components built to provide iconography, dropdowns, input groups, navigation, alerts, and much more.</p>
+</blockquote>
+<p>什么叫做组件？<br>组件都是基于基本的html标签，比如下拉菜单。下拉菜单是由按钮标签和列表标签组合而成，添加了js效果和css样式。</p>
+<h2 id="4-js插件"><a href="#4-js插件" class="headerlink" title="4. js插件"></a>4. js插件</h2><blockquote>
+<p>Bring Bootstrap’s components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.</p>
+</blockquote>
+<p>tags:front-end</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/09/jQuery/" title="jQuery" itemprop="url">jQuery</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-09T08:25:20.196Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>[TOC]</p>
+<h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h2><p>What is jQuery?</p>
+<blockquote>
+<p>jQuery is a lightweight, “write less, do more”, JavaScript library.</p>
+</blockquote>
+<p>jQuery库包含以下功能：</p>
+<blockquote>
+<ul>
+<li>HTML 元素选取</li>
+<li>HTML 元素操作</li>
+<li>CSS 操作</li>
+<li>HTML 事件函数</li>
+<li>JavaScript 特效和动画</li>
+<li>HTML DOM 遍历和修改</li>
+<li>AJAX</li>
+<li>Utilities</li>
+</ul>
+</blockquote>
+<p>Why jQuery?</p>
+<blockquote>
+<p>There are lots of other JavaScript frameworks out there, but jQuery seems to be the most popular, and also the most extendable.</p>
+</blockquote>
+<h2 id="2-语法"><a href="#2-语法" class="headerlink" title="2. 语法"></a>2. 语法</h2><p>jQuery Syntax</p>
+<blockquote>
+<p>The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).</p>
+<p>Basic syntax is: $(selector).action()</p>
+<ul>
+<li>A $ sign to define/access jQuery</li>
+<li>A (selector) to “query (or find)” HTML elements</li>
+<li>A jQuery action() to be performed on the element(s)</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(this).hide() - hides the current element.</div><div class="line">$(&quot;p&quot;).hide() - hides all &lt;p&gt; elements.</div><div class="line">$(&quot;.test&quot;).hide() - hides all elements with class=&quot;test&quot;.</div><div class="line">$(&quot;#test&quot;).hide() - hides the element with id=&quot;test&quot;.</div></pre></td></tr></table></figure>
+<h2 id="3-选择器"><a href="#3-选择器" class="headerlink" title="3. 选择器"></a>3. 选择器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;</div><div class="line">    $(&quot;button&quot;).click(function()&#123;</div><div class="line">        $(&quot;p&quot;).hide();</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$(&quot;*&quot;)</code></td>
+<td>Selects all elements</td>
+</tr>
+<tr>
+<td><code>$(this)</code></td>
+<td>Selects the current HTML element</td>
+</tr>
+<tr>
+<td><code>$(document)</code></td>
+<td>Selects the current HTML document</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-事件"><a href="#4-事件" class="headerlink" title="4. 事件"></a>4. 事件</h2><p>What are Events?</p>
+<blockquote>
+<p>All the different <em><strong>visitor’s actions</strong></em> that a <em><strong>web page can respond</strong></em> to are called events.</p>
+</blockquote>
+<p>An event represents the precise moment when something happens.</p>
+<p>The term <strong>“fires/fired”</strong> is often used with events. Example: “The keypress event is fired, the moment you press a key”.</p>
+<table>
+<thead>
+<tr>
+<th>Mouse Events</th>
+<th>Keyboard Events</th>
+<th>Form Events</th>
+<th>Document/Window Events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>click</td>
+<td>keypress</td>
+<td>submit</td>
+<td>load</td>
+</tr>
+<tr>
+<td>dblclick</td>
+<td>keydown</td>
+<td>change</td>
+<td>resize</td>
+</tr>
+<tr>
+<td>mouseenter</td>
+<td>keyup</td>
+<td>focus</td>
+<td>scroll</td>
+</tr>
+<tr>
+<td>mouseleave</td>
+<td></td>
+<td>blur</td>
+<td>unload</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-事件效果"><a href="#5-事件效果" class="headerlink" title="5. 事件效果"></a>5. 事件效果</h2><ul>
+<li>hide/show</li>
+<li>fade</li>
+<li>slide</li>
+<li>animate</li>
+<li>stop</li>
+<li>callback</li>
+<li>chaining</li>
+</ul>
+<h2 id="6-获取-控制-内容和属性"><a href="#6-获取-控制-内容和属性" class="headerlink" title="6. 获取/控制 内容和属性"></a>6. 获取/控制 内容和属性</h2><p>jQuery DOM 操作</p>
+<blockquote>
+<p>jQuery 中非常重要的部分，就是操作 DOM 的能力。<br>jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。</p>
+<p>DOM = Document Object Model（文档对象模型）</p>
+</blockquote>
+<p>我们可以获取一些元素的内容或者属性。<br>我们也可以增加、删除、修改这些属性。</p>
+<h2 id="7-jQuery-AJAX"><a href="#7-jQuery-AJAX" class="headerlink" title="7. jQuery-AJAX"></a>7. jQuery-AJAX</h2><p>什么是 AJAX？</p>
+<blockquote>
+<p>AJAX = 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）。<br>简短地说，在不重载整个网页的情况下，AJAX通过后台加载数据，并在网页上进行显示。<br>使用 AJAX 的应用程序案例：谷歌地图、腾讯微博、优酷视频、人人网等等。</p>
+</blockquote>
+<p>关于 jQuery 与 AJAX</p>
+<blockquote>
+<p>jQuery 提供多个与 AJAX 有关的方法。<br>通过 jQuery AJAX 方法，您能够使用 HTTP Get 和 HTTP Post 从远程服务器上请求文本、HTML、XML 或 JSON - 同时您能够把这些外部数据直接载入网页的被选元素中。</p>
+</blockquote>
+<ul>
+<li><p><code>load()</code> 方法</p>
+<blockquote>
+<p>jQuery load() 方法是简单但强大的 AJAX 方法。<br>load() 方法从服务器加载数据，并把返回的数据放入被选元素中。</p>
+</blockquote>
+</li>
+<li><p><code>$.get()</code>方法</p>
+<blockquote>
+<p>$.get() 方法通过 HTTP GET 请求从服务器上请求数据。</p>
+</blockquote>
+</li>
+<li><p><code>$.post()</code> 方法</p>
+<blockquote>
+<p>$.post() 方法通过 HTTP POST 请求从服务器上请求数据。</p>
+</blockquote>
+</li>
+</ul>
+<p>tags:front-end</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/09/vim-shortcut-md/" title="vim快捷键" itemprop="url">vim快捷键</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-09T08:22:49.000Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>[TOC]</p>
+<h3 id="1-删除"><a href="#1-删除" class="headerlink" title="1. 删除"></a>1. 删除</h3><p>删除字符<code>x</code>和<code>X</code>，一个后向删除，一个前向删除<br>eg:<code>5x</code>向后删除5个字符<br>删除行<code>dd</code><br>eg:<code>dd</code>删除当前行<br>eg:<code>d$</code>删除光标到行尾<br>eg:<code>d0</code>删除光标到行头<br>eg:<code>3dd</code>向下删除3行<br>eg:<code>d10gg</code>删除当前光标和第10行之间的所有内容</p>
+<h3 id="2-复制"><a href="#2-复制" class="headerlink" title="2. 复制"></a>2. 复制</h3><p>复制的操作和删除如出一辙</p>
+<h3 id="3-数字"><a href="#3-数字" class="headerlink" title="3. 数字"></a>3. 数字</h3><p>vim中的数字很重要，表示重复操作。<code>20j</code>表示向下移动20行。</p>
+<h3 id="4-Vim多窗口编辑"><a href="#4-Vim多窗口编辑" class="headerlink" title="4. Vim多窗口编辑"></a>4. Vim多窗口编辑</h3><h4 id="4-1-在同一个窗口显示多个文件"><a href="#4-1-在同一个窗口显示多个文件" class="headerlink" title="4.1 在同一个窗口显示多个文件"></a>4.1 在同一个窗口显示多个文件</h4><blockquote>
+<p>vim file1 file2</p>
+</blockquote>
+<p>同时打开了file1和file2，不过file1占据了整个窗口。切换文件命令如下：</p>
+<blockquote>
+<p>:n 切换到下一个文件<br>:N 切换到上一个文件<br>:n file2 切换到file2</p>
+</blockquote>
+<p>每个打开的文件都对应一个buffer，故可以通过切换buffer来达到切换文件的目的。</p>
+<blockquote>
+<p>:ls 列出vim打开的所有文件的信息，包括文件名，buffer id等<br>:b2 切换到buffer id为2的buffer<br>:bn 切换到当前buffer的下一个buffer<br>:bp 切换当前buffer的前一个buffer<br>:bd 关闭当前buffer，对应文件也随之关闭<br>:bd2 关闭buffer id为2的buffer，对应文件也随之关闭</p>
+</blockquote>
+<h4 id="4-2-分割窗口，显示多个文件"><a href="#4-2-分割窗口，显示多个文件" class="headerlink" title="4.2 分割窗口，显示多个文件"></a>4.2 分割窗口，显示多个文件</h4><blockquote>
+<p>vim -on filename1 filename2 水平分割窗口<br>vim -On filename1 filename2 垂直分割窗口<br>可按ctrl ww在各窗口之间进行切换。<br>n是数字，表示分成几个屏。</p>
+</blockquote>
+<h4 id="4-3-增加打开新的文件"><a href="#4-3-增加打开新的文件" class="headerlink" title="4.3 增加打开新的文件"></a>4.3 增加打开新的文件</h4><p>假若我们通过vim打开了多个文件后，想在不关闭vim的情况下继续打开其他文件，如文件file，可在vim中使用如下命令：</p>
+<blockquote>
+<p>：e file 不会分割窗口<br>：sp file 将会水平分割窗口<br>：vsp file 将会垂直分割窗口</p>
+</blockquote>
+<h4 id="4-4-移动光标"><a href="#4-4-移动光标" class="headerlink" title="4.4 移动光标"></a>4.4 移动光标</h4><p>Vim中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W。</p>
+<blockquote>
+<p>ctrl+w+h/j/k/l</p>
+</blockquote>
+<p>特别的：</p>
+<blockquote>
+<p>ctrl+w+w 光标移到下一个屏</p>
+</blockquote>
+<p>标签：vim</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/10/09/linux_command/" title="linux命令行" itemprop="url">linux命令行</a>
   </h1>
   <p class="article-author">By

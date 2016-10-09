@@ -4,62 +4,35 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>linux命令行 | Deep Thinking</title>
+    <title>vim快捷键 | Deep Thinking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Liu muzhi">
     
 
     
-    <meta name="description" content="[toc]
-bash命令
-==uname -aShow system and kernel==
-==whoamiShow your username==
-mountShow mounted filesystems
-
-前台后台 fg/bg有些命令执行很花时间，我们可以将其放在后台执行。
-
-在命令的结尾加上&amp;amp;
-执行完命令后，输入ctrl+z或者bg
-
-如何将后台程序调入前台呢？
-
-执行命令jo">
+    <meta name="description" content="[TOC]
+1. 删除删除字符x和X，一个后向删除，一个前向删除eg:5x向后删除5个字符删除行ddeg:dd删除当前行eg:d$删除光标到行尾eg:d0删除光标到行头eg:3dd向下删除3行eg:d10gg删除当前光标和第10行之间的所有内容
+2. 复制复制的操作和删除如出一辙
+3. 数字vim中的数字很重要，表示重复操作。20j表示向下移动20行。
+4. Vim多窗口编辑4.1 在同一个窗口显">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux命令行">
-<meta property="og:url" content="http://yoursite.com/2016/10/09/linux_command/index.html">
+<meta property="og:title" content="vim快捷键">
+<meta property="og:url" content="http://yoursite.com/2016/10/09/vim-shortcut-md/index.html">
 <meta property="og:site_name" content="Deep Thinking">
-<meta property="og:description" content="[toc]
-bash命令
-==uname -aShow system and kernel==
-==whoamiShow your username==
-mountShow mounted filesystems
-
-前台后台 fg/bg有些命令执行很花时间，我们可以将其放在后台执行。
-
-在命令的结尾加上&amp;amp;
-执行完命令后，输入ctrl+z或者bg
-
-如何将后台程序调入前台呢？
-
-执行命令jo">
-<meta property="og:updated_time" content="2016-10-09T08:18:53.083Z">
+<meta property="og:description" content="[TOC]
+1. 删除删除字符x和X，一个后向删除，一个前向删除eg:5x向后删除5个字符删除行ddeg:dd删除当前行eg:d$删除光标到行尾eg:d0删除光标到行头eg:3dd向下删除3行eg:d10gg删除当前光标和第10行之间的所有内容
+2. 复制复制的操作和删除如出一辙
+3. 数字vim中的数字很重要，表示重复操作。20j表示向下移动20行。
+4. Vim多窗口编辑4.1 在同一个窗口显">
+<meta property="og:updated_time" content="2016-10-09T08:24:21.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux命令行">
-<meta name="twitter:description" content="[toc]
-bash命令
-==uname -aShow system and kernel==
-==whoamiShow your username==
-mountShow mounted filesystems
-
-前台后台 fg/bg有些命令执行很花时间，我们可以将其放在后台执行。
-
-在命令的结尾加上&amp;amp;
-执行完命令后，输入ctrl+z或者bg
-
-如何将后台程序调入前台呢？
-
-执行命令jo">
+<meta name="twitter:title" content="vim快捷键">
+<meta name="twitter:description" content="[TOC]
+1. 删除删除字符x和X，一个后向删除，一个前向删除eg:5x向后删除5个字符删除行ddeg:dd删除当前行eg:d$删除光标到行尾eg:d0删除光标到行头eg:3dd向下删除3行eg:d10gg删除当前光标和第10行之间的所有内容
+2. 复制复制的操作和删除如出一辙
+3. 数字vim中的数字很重要，表示重复操作。20j表示向下移动20行。
+4. Vim多窗口编辑4.1 在同一个窗口显">
 
     
     <link rel="alternative" href="/atom.xml" title="Deep Thinking" type="application/atom+xml">
@@ -119,14 +92,14 @@ mountShow mounted filesystems
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/09/linux_command/" title="linux命令行" itemprop="url">linux命令行</a>
+      <a href="/2016/10/09/vim-shortcut-md/" title="vim快捷键" itemprop="url">vim快捷键</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-09T08:18:53.083Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    <time datetime="2016-10-09T08:22:49.000Z" itemprop="datePublished"> 发表于 2016-10-09</time>
     
   </p>
 </header>
@@ -135,71 +108,41 @@ mountShow mounted filesystems
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bash命令"><span class="toc-number">1.</span> <span class="toc-text">bash命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前台后台-fg-bg"><span class="toc-number">2.</span> <span class="toc-text">前台后台 fg/bg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程"><span class="toc-number">3.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杀死进程"><span class="toc-number">4.</span> <span class="toc-text">杀死进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找命令"><span class="toc-number">5.</span> <span class="toc-text">查找命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令列表"><span class="toc-number">6.</span> <span class="toc-text">命令列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道命令"><span class="toc-number">7.</span> <span class="toc-text">管道命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向"><span class="toc-number">8.</span> <span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件操作"><span class="toc-number">9.</span> <span class="toc-text">文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-number">10.</span> <span class="toc-text">grep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bash变量"><span class="toc-number">11.</span> <span class="toc-text">bash变量</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-删除"><span class="toc-number">1.</span> <span class="toc-text">1. 删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-复制"><span class="toc-number">2.</span> <span class="toc-text">2. 复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数字"><span class="toc-number">3.</span> <span class="toc-text">3. 数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Vim多窗口编辑"><span class="toc-number">4.</span> <span class="toc-text">4. Vim多窗口编辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-在同一个窗口显示多个文件"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 在同一个窗口显示多个文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-分割窗口，显示多个文件"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 分割窗口，显示多个文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-增加打开新的文件"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 增加打开新的文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-移动光标"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 移动光标</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>[toc]</p>
-<h3 id="bash命令"><a href="#bash命令" class="headerlink" title="bash命令"></a>bash命令</h3><ul>
-<li>==<code>uname -a</code>Show system and kernel==</li>
-<li>==<code>whoami</code>Show your username==</li>
-<li><code>mount</code>Show mounted filesystems</li>
-</ul>
-<h3 id="前台后台-fg-bg"><a href="#前台后台-fg-bg" class="headerlink" title="前台后台 fg/bg"></a>前台后台 fg/bg</h3><p>有些命令执行很花时间，我们可以将其放在后台执行。</p>
-<ul>
-<li>在命令的结尾加上<code>&amp;</code></li>
-<li>执行完命令后，输入<code>ctrl+z</code>或者<code>bg</code></li>
-</ul>
-<p>如何将后台程序调入前台呢？</p>
-<ul>
-<li>执行命令<code>jobs</code>，列出所有后台命令</li>
-<li>fg %进程id,eg:<code>fg %2</code></li>
-</ul>
-<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><ul>
-<li><code>ps</code>最基础的浏览进程的命令。常用的是<code>ps -aux</code></li>
-<li><code>pstree</code>每个进程都是由父进程创建的，可视化显示进程间的关系。指定了进程号，那么根进程就是该进程。没有指定，根进程是<code>init</code>，pid=1</li>
-<li><code>top</code>实时显示系统的进程状态</li>
-<li><code>ps</code> Show snapshot of processes</li>
-<li><code>top</code> Show real time processes</li>
-<li><code>kill pid</code> Kill process with id pid</li>
-<li>==<code>pkill name</code> Kill process with name name==</li>
-<li>==<code>killall name</code> Kill all processes with names beginning name==</li>
-</ul>
-<h3 id="杀死进程"><a href="#杀死进程" class="headerlink" title="杀死进程"></a>杀死进程</h3><ul>
-<li><code>kill pid</code>杀死某个进程</li>
-<li><code>kill -9 pid</code>强制杀死。慎用。没有机会清理现场，比如，文件可能没有写完</li>
-</ul>
-<h3 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h3><ul>
-<li>==<code>find</code>最强大的查找命令。格式：<code>find &lt;指定目录&gt; &lt;指定条件&gt; &lt;指定动作&gt;</code>。举例：<code>find . -name &#39;my*&#39; -ls</code>==</li>
-<li>==<code>locate</code>查找速度比<code>find</code>快，但是查找不到最近更新的文件，可以预先执行<code>updatedb</code>。eg:<code>locate /etc/sh</code>搜索etc目录下所有以sh开头的文件。==</li>
-<li><code>which</code>在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。</li>
-</ul>
-<h3 id="命令列表"><a href="#命令列表" class="headerlink" title="命令列表"></a>命令列表</h3><ul>
-<li>==<code>cmd1 ; cmd2</code>Run cmd1 then cmd2==</li>
-<li><code>cmd1 &amp;&amp; cmd2</code>Run cmd2 if cmd1 is successful</li>
-<li><code>cmd1 || cmd2</code>Run cmd2 if cmd1 is not successful</li>
-<li><code>cmd &amp;</code>Run cmd in a subshell</li>
-</ul>
-<h3 id="管道命令"><a href="#管道命令" class="headerlink" title="管道命令"></a>管道命令</h3><ul>
-<li><code>cmd1 | cmd2</code>stdout of cmd1 to cmd2</li>
-<li>==<code>cmd1 |&amp; cmd2</code>stderr of cmd1 to cmd2==</li>
-</ul>
-<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1&gt; ：以覆盖的方法将『正确的数据』输出到指定的文件或装置上；</div><div class="line">1&gt;&gt;：以累加的方法将『正确的数据』输出到指定的文件或装置上；</div><div class="line">2&gt; ：以覆盖的方法将『错误的数据』输出到指定的文件或装置上；</div><div class="line">2&gt;&gt;：以累加的方法将『错误的数据』输出到指定的文件或装置上；</div></pre></td></tr></table></figure>
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul>
-<li><code>touch file</code>Create file</li>
-<li><code>cat file1 file2</code>Concatenate files and output</li>
-<li><code>less file</code>View and paginate file</li>
-<li>==<code>file file</code>Get type of file==</li>
-</ul>
-<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><h3 id="bash变量"><a href="#bash变量" class="headerlink" title="bash变量"></a>bash变量</h3><ul>
-<li>==<code>env</code>Show environment variables==</li>
-<li><code>echo $NAME</code>Output value of $NAME variable</li>
-<li>==<code>export NAME=value</code>Set $NAME to value==</li>
-<li><code>$PATH</code>Executable search path</li>
-<li><code>$HOME</code>Home directory</li>
-<li><code>$SHELL</code>Current shell</li>
-</ul>
-<p>标签：linux</p>
+		<p>[TOC]</p>
+<h3 id="1-删除"><a href="#1-删除" class="headerlink" title="1. 删除"></a>1. 删除</h3><p>删除字符<code>x</code>和<code>X</code>，一个后向删除，一个前向删除<br>eg:<code>5x</code>向后删除5个字符<br>删除行<code>dd</code><br>eg:<code>dd</code>删除当前行<br>eg:<code>d$</code>删除光标到行尾<br>eg:<code>d0</code>删除光标到行头<br>eg:<code>3dd</code>向下删除3行<br>eg:<code>d10gg</code>删除当前光标和第10行之间的所有内容</p>
+<h3 id="2-复制"><a href="#2-复制" class="headerlink" title="2. 复制"></a>2. 复制</h3><p>复制的操作和删除如出一辙</p>
+<h3 id="3-数字"><a href="#3-数字" class="headerlink" title="3. 数字"></a>3. 数字</h3><p>vim中的数字很重要，表示重复操作。<code>20j</code>表示向下移动20行。</p>
+<h3 id="4-Vim多窗口编辑"><a href="#4-Vim多窗口编辑" class="headerlink" title="4. Vim多窗口编辑"></a>4. Vim多窗口编辑</h3><h4 id="4-1-在同一个窗口显示多个文件"><a href="#4-1-在同一个窗口显示多个文件" class="headerlink" title="4.1 在同一个窗口显示多个文件"></a>4.1 在同一个窗口显示多个文件</h4><blockquote>
+<p>vim file1 file2</p>
+</blockquote>
+<p>同时打开了file1和file2，不过file1占据了整个窗口。切换文件命令如下：</p>
+<blockquote>
+<p>:n 切换到下一个文件<br>:N 切换到上一个文件<br>:n file2 切换到file2</p>
+</blockquote>
+<p>每个打开的文件都对应一个buffer，故可以通过切换buffer来达到切换文件的目的。</p>
+<blockquote>
+<p>:ls 列出vim打开的所有文件的信息，包括文件名，buffer id等<br>:b2 切换到buffer id为2的buffer<br>:bn 切换到当前buffer的下一个buffer<br>:bp 切换当前buffer的前一个buffer<br>:bd 关闭当前buffer，对应文件也随之关闭<br>:bd2 关闭buffer id为2的buffer，对应文件也随之关闭</p>
+</blockquote>
+<h4 id="4-2-分割窗口，显示多个文件"><a href="#4-2-分割窗口，显示多个文件" class="headerlink" title="4.2 分割窗口，显示多个文件"></a>4.2 分割窗口，显示多个文件</h4><blockquote>
+<p>vim -on filename1 filename2 水平分割窗口<br>vim -On filename1 filename2 垂直分割窗口<br>可按ctrl ww在各窗口之间进行切换。<br>n是数字，表示分成几个屏。</p>
+</blockquote>
+<h4 id="4-3-增加打开新的文件"><a href="#4-3-增加打开新的文件" class="headerlink" title="4.3 增加打开新的文件"></a>4.3 增加打开新的文件</h4><p>假若我们通过vim打开了多个文件后，想在不关闭vim的情况下继续打开其他文件，如文件file，可在vim中使用如下命令：</p>
+<blockquote>
+<p>：e file 不会分割窗口<br>：sp file 将会水平分割窗口<br>：vsp file 将会垂直分割窗口</p>
+</blockquote>
+<h4 id="4-4-移动光标"><a href="#4-4-移动光标" class="headerlink" title="4.4 移动光标"></a>4.4 移动光标</h4><p>Vim中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W。</p>
+<blockquote>
+<p>ctrl+w+h/j/k/l</p>
+</blockquote>
+<p>特别的：</p>
+<blockquote>
+<p>ctrl+w+w 光标移到下一个屏</p>
+</blockquote>
+<p>标签：vim</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -212,7 +155,7 @@ mountShow mounted filesystems
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/10/09/linux_command/" data-title="linux命令行 | Deep Thinking" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/10/09/vim-shortcut-md/" data-title="vim快捷键 | Deep Thinking" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -226,18 +169,18 @@ mountShow mounted filesystems
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/10/09/vim-shortcut-md/" title="vim快捷键">
+ <a href="/2016/10/09/jQuery/" title="jQuery">
   <strong>上一篇：</strong><br/>
   <span>
-  vim快捷键</span>
+  jQuery</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/10/09/hello-world/"  title="Hello World">
+<a href="/2016/10/09/linux_command/"  title="linux命令行">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>linux命令行
 </span>
 </a>
 </div>
@@ -252,7 +195,7 @@ mountShow mounted filesystems
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#bash命令"><span class="toc-number">1.</span> <span class="toc-text">bash命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前台后台-fg-bg"><span class="toc-number">2.</span> <span class="toc-text">前台后台 fg/bg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进程"><span class="toc-number">3.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#杀死进程"><span class="toc-number">4.</span> <span class="toc-text">杀死进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查找命令"><span class="toc-number">5.</span> <span class="toc-text">查找命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令列表"><span class="toc-number">6.</span> <span class="toc-text">命令列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#管道命令"><span class="toc-number">7.</span> <span class="toc-text">管道命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重定向"><span class="toc-number">8.</span> <span class="toc-text">重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件操作"><span class="toc-number">9.</span> <span class="toc-text">文件操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep"><span class="toc-number">10.</span> <span class="toc-text">grep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bash变量"><span class="toc-number">11.</span> <span class="toc-text">bash变量</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-删除"><span class="toc-number">1.</span> <span class="toc-text">1. 删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-复制"><span class="toc-number">2.</span> <span class="toc-text">2. 复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数字"><span class="toc-number">3.</span> <span class="toc-text">3. 数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Vim多窗口编辑"><span class="toc-number">4.</span> <span class="toc-text">4. Vim多窗口编辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-在同一个窗口显示多个文件"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 在同一个窗口显示多个文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-分割窗口，显示多个文件"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 分割窗口，显示多个文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-增加打开新的文件"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 增加打开新的文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-移动光标"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 移动光标</span></a></li></ol></li></ol>
  
   </div>
 
