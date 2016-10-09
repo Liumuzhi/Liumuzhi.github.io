@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Github Pages和Hexo搭静态博客 | Deep Thinking</title>
+    <title>AJAX | Deep Thinking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Liu muzhi">
@@ -12,47 +12,40 @@
 
     
     <meta name="description" content="[toc]
-所需工具
-git
-nodejs
-npm是否安装成功命令：123git -vnode -vnpm -v
+Intro
+AJAX = Asynchronous JavaScript And XML.
 
+AJAX is a misleading name. You don’t have to understand XML to use AJAX.
+当我们加载整个网页后，可以让网页中的一部分去服务器交换数据。
 
-安装hexo12npm install hexo-cli -gnpm install hexo --save
-安装hexo插件12npm installnpm install hexo-deployer-git --save
-hexo初始化进入目标文件夹1hexo init
-此时，">
+AJAX allows web pages to be updated asynch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github Pages和Hexo搭静态博客">
-<meta property="og:url" content="http://yoursite.com/2016/10/09/hexo/index.html">
+<meta property="og:title" content="AJAX">
+<meta property="og:url" content="http://yoursite.com/2016/10/09/AJAX/index.html">
 <meta property="og:site_name" content="Deep Thinking">
 <meta property="og:description" content="[toc]
-所需工具
-git
-nodejs
-npm是否安装成功命令：123git -vnode -vnpm -v
+Intro
+AJAX = Asynchronous JavaScript And XML.
 
+AJAX is a misleading name. You don’t have to understand XML to use AJAX.
+当我们加载整个网页后，可以让网页中的一部分去服务器交换数据。
 
-安装hexo12npm install hexo-cli -gnpm install hexo --save
-安装hexo插件12npm installnpm install hexo-deployer-git --save
-hexo初始化进入目标文件夹1hexo init
-此时，">
-<meta property="og:image" content="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png">
-<meta property="og:updated_time" content="2016-10-09T13:58:56.294Z">
+AJAX allows web pages to be updated asynch">
+<meta property="og:image" content="https://raw.githubusercontent.com/Liumuzhi/image/master/FireShot%20Capture%204%20-%20AJAX%20Introduction%20-%20http___www.w3schools.com_xml_ajax_intro.asp.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Liumuzhi/image/master/FireShot%20Capture%205%20-%20AJAX%20Create%20an%20X_%20-%20http___www.w3schools.com_xml_ajax_xmlhttprequest_create.asp.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Liumuzhi/image/master/FireShot%20Capture%206%20-%20AJAX%20Create%20an%20X_%20-%20http___www.w3schools.com_xml_ajax_xmlhttprequest_create.asp.png">
+<meta property="og:updated_time" content="2016-10-09T15:45:25.382Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github Pages和Hexo搭静态博客">
+<meta name="twitter:title" content="AJAX">
 <meta name="twitter:description" content="[toc]
-所需工具
-git
-nodejs
-npm是否安装成功命令：123git -vnode -vnpm -v
+Intro
+AJAX = Asynchronous JavaScript And XML.
 
+AJAX is a misleading name. You don’t have to understand XML to use AJAX.
+当我们加载整个网页后，可以让网页中的一部分去服务器交换数据。
 
-安装hexo12npm install hexo-cli -gnpm install hexo --save
-安装hexo插件12npm installnpm install hexo-deployer-git --save
-hexo初始化进入目标文件夹1hexo init
-此时，">
-<meta name="twitter:image" content="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png">
+AJAX allows web pages to be updated asynch">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Liumuzhi/image/master/FireShot%20Capture%204%20-%20AJAX%20Introduction%20-%20http___www.w3schools.com_xml_ajax_intro.asp.png">
 
     
     <link rel="alternative" href="/atom.xml" title="Deep Thinking" type="application/atom+xml">
@@ -112,14 +105,14 @@ hexo初始化进入目标文件夹1hexo init
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/09/hexo/" title="Github Pages和Hexo搭静态博客" itemprop="url">Github Pages和Hexo搭静态博客</a>
+      <a href="/2016/10/09/AJAX/" title="AJAX" itemprop="url">AJAX</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-09T13:58:56.294Z" itemprop="datePublished"> 发表于 2016-10-09</time>
+    <time datetime="2016-10-09T15:45:25.382Z" itemprop="datePublished"> 发表于 2016-10-09</time>
     
   </p>
 </header>
@@ -128,41 +121,45 @@ hexo初始化进入目标文件夹1hexo init
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#所需工具"><span class="toc-number">1.</span> <span class="toc-text">所需工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo插件"><span class="toc-number">3.</span> <span class="toc-text">安装hexo插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-number">4.</span> <span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看本地效果"><span class="toc-number">5.</span> <span class="toc-text">查看本地效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新建username-github-io"><span class="toc-number">6.</span> <span class="toc-text">新建username.github.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改全局-config-yml文件"><span class="toc-number">7.</span> <span class="toc-text">修改全局_config.yml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看远程效果"><span class="toc-number">8.</span> <span class="toc-text">查看远程效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载主题"><span class="toc-number">9.</span> <span class="toc-text">下载主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新主题"><span class="toc-number">10.</span> <span class="toc-text">更新主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置主题"><span class="toc-number">11.</span> <span class="toc-text">配置主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他命令"><span class="toc-number">12.</span> <span class="toc-text">其他命令</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Request"><span class="toc-number">2.</span> <span class="toc-text">Request</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-an-XMLHttpRequest-Object"><span class="toc-number">2.1.</span> <span class="toc-text">Create an XMLHttpRequest Object</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Send-a-Request-To-a-Server"><span class="toc-number">2.2.</span> <span class="toc-text">Send a Request To a Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Server-Response"><span class="toc-number">2.3.</span> <span class="toc-text">Server Response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-onreadystatechange-event"><span class="toc-number">2.4.</span> <span class="toc-text">The onreadystatechange event</span></a></li></ol></li></ol>
 		
 		</div>
 		
 		<p>[toc]</p>
-<h2 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h2><ul>
-<li>git</li>
-<li>nodejs</li>
-<li>npm<br>是否安装成功命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git -v</div><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
-</li>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><blockquote>
+<p>AJAX = Asynchronous JavaScript And XML.</p>
+</blockquote>
+<p><em><strong>AJAX is a misleading name. You don’t have to understand XML to use AJAX.</strong></em></p>
+<p>当我们加载整个网页后，可以让网页中的一部分去服务器交换数据。</p>
+<blockquote>
+<p>AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.</p>
+</blockquote>
+<p>这里的异步指的是加载整个网页的时间和网页中的一部分与服务器交换数据的时间不一致。</p>
+<p>How AJAX Works:<br><img src="https://raw.githubusercontent.com/Liumuzhi/image/master/FireShot%20Capture%204%20-%20AJAX%20Introduction%20-%20http___www.w3schools.com_xml_ajax_intro.asp.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">A[浏览器发生事件]--&gt;B[发送请求]</div><div class="line">B--&gt;C[服务器处理请求 ]</div><div class="line">C--&gt;D[返回数据]</div><div class="line">D--&gt;E[浏览器处理数据]</div><div class="line">E--&gt;F[跟新页面]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>AJAX is based on internet standards, and uses a combination of:</p>
+<ul>
+<li>XMLHttpRequest object (to retrieve data from a web server)</li>
+<li>JavaScript/DOM (to display/use the data)</li>
 </ul>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">npm install hexo --save</div></pre></td></tr></table></figure>
-<h2 id="安装hexo插件"><a href="#安装hexo插件" class="headerlink" title="安装hexo插件"></a>安装hexo插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><p>进入目标文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
-<p>此时，目标文件夹下就会有新建的所需文件。</p>
-<h2 id="查看本地效果"><a href="#查看本地效果" class="headerlink" title="查看本地效果"></a>查看本地效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure>
-<p>登陆localhost:4000，即可查看本地的效果。<br>现在本地的博客已经搭建起来，接着我们将其部署到github上</p>
-<h2 id="新建username-github-io"><a href="#新建username-github-io" class="headerlink" title="新建username.github.io"></a>新建username.github.io</h2><p>在github上新建仓库，名为username.github.io</p>
-<h2 id="修改全局-config-yml文件"><a href="#修改全局-config-yml文件" class="headerlink" title="修改全局_config.yml文件"></a>修改全局_config.yml文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure>
-<p><img src="http://7xrwkh.com1.z0.glb.clouddn.com/getHTTPS-teach_5.png" alt=""></p>
-<h2 id="查看远程效果"><a href="#查看远程效果" class="headerlink" title="查看远程效果"></a>查看远程效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>或者直接执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g -d</div></pre></td></tr></table></figure></p>
-<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes</div><div class="line">git clone https://github.com/wuchong/jacman.git themes/jacman</div></pre></td></tr></table></figure>
-<h2 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd themes/jacman</div><div class="line">git pull origin master</div></pre></td></tr></table></figure>
-<p>请先备份您主题目录下的 _config.yml 文件后再升级。</p>
-<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>修改全局配置文件_config.yml，修改theme名。<br><a href="http://wuchong.me/blog/2014/11/20/how-to-use-jacman/" title="Jacman作者" target="_blank" rel="external">如何使用Jacman主题</a></p>
-<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p>更新主题：</p>
-<blockquote>
-<p>hexo clean;hexo g;hexo d</p>
 </blockquote>
-<p>更新文章：</p>
+<h2 id="Request"><a href="#Request" class="headerlink" title="Request"></a>Request</h2><h3 id="Create-an-XMLHttpRequest-Object"><a href="#Create-an-XMLHttpRequest-Object" class="headerlink" title="Create an XMLHttpRequest Object"></a>Create an XMLHttpRequest Object</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variable = new XMLHttpRequest();</div></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/Liumuzhi/image/master/FireShot%20Capture%205%20-%20AJAX%20Create%20an%20X_%20-%20http___www.w3schools.com_xml_ajax_xmlhttprequest_create.asp.png" alt=""></p>
+<hr>
+<p><img src="https://raw.githubusercontent.com/Liumuzhi/image/master/FireShot%20Capture%206%20-%20AJAX%20Create%20an%20X_%20-%20http___www.w3schools.com_xml_ajax_xmlhttprequest_create.asp.png" alt=""></p>
+<h3 id="Send-a-Request-To-a-Server"><a href="#Send-a-Request-To-a-Server" class="headerlink" title="Send a Request To a Server"></a>Send a Request To a Server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, true);</div><div class="line">xhttp.send();</div></pre></td></tr></table></figure>
+<h3 id="Server-Response"><a href="#Server-Response" class="headerlink" title="Server Response"></a>Server Response</h3><p>To get the response from a server, use the responseText or responseXML property of the XMLHttpRequest object.<br>Property | Description<br>— |—<br>responseText|get the response data as a string<br>responseXML|get the response data as XML data</p>
 <blockquote>
-<p>henxo g;hexo d</p>
+<p>If the response from the server is not XML, use the responseText property.<br>If the response from the server is XML, and you want to parse it as an XML object, use the responseXML property.</p>
 </blockquote>
-<p>tags: github</p>
+<h3 id="The-onreadystatechange-event"><a href="#The-onreadystatechange-event" class="headerlink" title="The onreadystatechange event"></a>The onreadystatechange event</h3><blockquote>
+<p>When a request to a server is sent, we want to perform some actions based on the response.<br>The onreadystatechange event is triggered every time the readyState changes.<br>The readyState property holds the status of the XMLHttpRequest.</p>
+</blockquote>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;div id=&quot;demo&quot;&gt;&lt;h2&gt;Let AJAX change this text&lt;/h2&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;button type=&quot;button&quot; onclick=&quot;loadDoc()&quot;&gt;Change Content&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">function loadDoc() &#123;</div><div class="line">  var xhttp = new XMLHttpRequest();</div><div class="line">  xhttp.onreadystatechange = function() &#123;</div><div class="line">    if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</div><div class="line">      document.getElementById(&quot;demo&quot;).innerHTML = this.responseText;</div><div class="line">    &#125;</div><div class="line">  &#125;;</div><div class="line">  xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, true);</div><div class="line">  xhttp.send();</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<hr>
+<p>tags: front-end</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -175,7 +172,7 @@ hexo初始化进入目标文件夹1hexo init
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/10/09/hexo/" data-title="Github Pages和Hexo搭静态博客 | Deep Thinking" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/10/09/AJAX/" data-title="AJAX | Deep Thinking" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -188,19 +185,11 @@ hexo初始化进入目标文件夹1hexo init
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/10/09/AJAX/" title="AJAX">
-  <strong>上一篇：</strong><br/>
-  <span>
-  AJAX</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/10/09/XML/"  title="XML">
+<a href="/2016/10/09/hexo/"  title="Github Pages和Hexo搭静态博客">
  <strong>下一篇：</strong><br/> 
- <span>XML
+ <span>Github Pages和Hexo搭静态博客
 </span>
 </a>
 </div>
@@ -215,7 +204,7 @@ hexo初始化进入目标文件夹1hexo init
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#所需工具"><span class="toc-number">1.</span> <span class="toc-text">所需工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo插件"><span class="toc-number">3.</span> <span class="toc-text">安装hexo插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo初始化"><span class="toc-number">4.</span> <span class="toc-text">hexo初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看本地效果"><span class="toc-number">5.</span> <span class="toc-text">查看本地效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新建username-github-io"><span class="toc-number">6.</span> <span class="toc-text">新建username.github.io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改全局-config-yml文件"><span class="toc-number">7.</span> <span class="toc-text">修改全局_config.yml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看远程效果"><span class="toc-number">8.</span> <span class="toc-text">查看远程效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载主题"><span class="toc-number">9.</span> <span class="toc-text">下载主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新主题"><span class="toc-number">10.</span> <span class="toc-text">更新主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置主题"><span class="toc-number">11.</span> <span class="toc-text">配置主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他命令"><span class="toc-number">12.</span> <span class="toc-text">其他命令</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Request"><span class="toc-number">2.</span> <span class="toc-text">Request</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-an-XMLHttpRequest-Object"><span class="toc-number">2.1.</span> <span class="toc-text">Create an XMLHttpRequest Object</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Send-a-Request-To-a-Server"><span class="toc-number">2.2.</span> <span class="toc-text">Send a Request To a Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Server-Response"><span class="toc-number">2.3.</span> <span class="toc-text">Server Response</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-onreadystatechange-event"><span class="toc-number">2.4.</span> <span class="toc-text">The onreadystatechange event</span></a></li></ol></li></ol>
  
   </div>
 
