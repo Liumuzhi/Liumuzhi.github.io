@@ -1,0 +1,550 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Deep Thinking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Liu muzhi">
+    
+
+    
+    <meta name="description" content="laravel[toc]
+LAMP环境配置以及部署到apache2
+Ubuntu 16 安装Laravel开发环境
+Laravel &amp;amp; Lumen 一键安装包下载
+Create Apache VirtualHost
+chmod -R 777 storage
+
+MVCmvc的一个很好的举例是：客户、服务员、厨师。
+HTTP RoutingBasic Routing
+The most bas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep Thinking">
+<meta property="og:url" content="http://yoursite.com/2016/10/15/laravel/index.html">
+<meta property="og:site_name" content="Deep Thinking">
+<meta property="og:description" content="laravel[toc]
+LAMP环境配置以及部署到apache2
+Ubuntu 16 安装Laravel开发环境
+Laravel &amp;amp; Lumen 一键安装包下载
+Create Apache VirtualHost
+chmod -R 777 storage
+
+MVCmvc的一个很好的举例是：客户、服务员、厨师。
+HTTP RoutingBasic Routing
+The most bas">
+<meta property="og:updated_time" content="2016-10-15T08:06:03.646Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deep Thinking">
+<meta name="twitter:description" content="laravel[toc]
+LAMP环境配置以及部署到apache2
+Ubuntu 16 安装Laravel开发环境
+Laravel &amp;amp; Lumen 一键安装包下载
+Create Apache VirtualHost
+chmod -R 777 storage
+
+MVCmvc的一个很好的举例是：客户、服务员、厨师。
+HTTP RoutingBasic Routing
+The most bas">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Deep Thinking" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/lo1go.png">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Deep Thinking" title="Deep Thinking"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Deep Thinking">Deep Thinking</a></h1>
+				<h2 class="blog-motto">深度思考</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/index">索引 | Index</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">简介 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/10/15/laravel/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-15T08:06:03.646Z" itemprop="datePublished"> 发表于 2016-10-15</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#laravel"><span class="toc-number">1.</span> <span class="toc-text">laravel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LAMP环境配置以及部署到apache2"><span class="toc-number">2.</span> <span class="toc-text">LAMP环境配置以及部署到apache2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MVC"><span class="toc-number">3.</span> <span class="toc-text">MVC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Routing"><span class="toc-number">4.</span> <span class="toc-text">HTTP Routing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Routing"><span class="toc-number">4.1.</span> <span class="toc-text">Basic Routing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Route-Parameters"><span class="toc-number">4.2.</span> <span class="toc-text">Route Parameters</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Required-Parameters"><span class="toc-number">4.2.1.</span> <span class="toc-text">Required Parameters</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Optional-Parameters"><span class="toc-number">4.2.2.</span> <span class="toc-text">Optional Parameters</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Regular-Expression-Constraints"><span class="toc-number">4.2.3.</span> <span class="toc-text">Regular Expression Constraints</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Global-Constraints"><span class="toc-number">4.2.4.</span> <span class="toc-text">Global Constraints</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named-Routes"><span class="toc-number">4.3.</span> <span class="toc-text">Named Routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Route-Groups"><span class="toc-number">4.4.</span> <span class="toc-text">Route Groups</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Middleware"><span class="toc-number">5.</span> <span class="toc-text">HTTP Middleware</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Controllers"><span class="toc-number">6.</span> <span class="toc-text">HTTP Controllers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Requests"><span class="toc-number">7.</span> <span class="toc-text">HTTP Requests</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Responses"><span class="toc-number">8.</span> <span class="toc-text">HTTP Responses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Views"><span class="toc-number">9.</span> <span class="toc-text">Views</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blade-Templates"><span class="toc-number">10.</span> <span class="toc-text">Blade Templates</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model"><span class="toc-number">11.</span> <span class="toc-text">Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库操作之-DB-facade"><span class="toc-number">12.</span> <span class="toc-text">数据库操作之　DB facade</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库操作之-查询构造器"><span class="toc-number">13.</span> <span class="toc-text">数据库操作之　查询构造器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库操作之-Eloquent-ORM"><span class="toc-number">14.</span> <span class="toc-text">数据库操作之　Eloquent ORM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blade模板引擎"><span class="toc-number">15.</span> <span class="toc-text">Blade模板引擎</span></a></li></ol>
+		
+		</div>
+		
+		<hr>
+<h2 id="laravel"><a href="#laravel" class="headerlink" title="laravel"></a>laravel</h2><p>[toc]</p>
+<h2 id="LAMP环境配置以及部署到apache2"><a href="#LAMP环境配置以及部署到apache2" class="headerlink" title="LAMP环境配置以及部署到apache2"></a>LAMP环境配置以及部署到apache2</h2><ul>
+<li><a href="http://www.jianshu.com/p/4933184d35cd" target="_blank" rel="external">Ubuntu 16 安装Laravel开发环境</a></li>
+<li><a href="http://www.golaravel.com/download/" target="_blank" rel="external">Laravel &amp; Lumen 一键安装包下载</a></li>
+<li><a href="http://tecadmin.net/install-laravel-framework-on-ubuntu/#" target="_blank" rel="external">Create Apache VirtualHost</a></li>
+<li><a href="http://blog.csdn.net/qq_28666081/article/details/51335255" target="_blank" rel="external">chmod -R 777 storage</a></li>
+</ul>
+<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>mvc的一个很好的举例是：客户、服务员、厨师。</p>
+<h2 id="HTTP-Routing"><a href="#HTTP-Routing" class="headerlink" title="HTTP Routing"></a>HTTP Routing</h2><h3 id="Basic-Routing"><a href="#Basic-Routing" class="headerlink" title="Basic Routing"></a>Basic Routing</h3><blockquote>
+<p>The most basic Laravel routes simply accept a URI and a Closure, providing a very simple and expressive method of defining routes.</p>
+</blockquote>
+<p>我们搜索网站的时候需要更详细的资源地址。Route提供了这些地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Route::method($uri,$callback)</div></pre></td></tr></table></figure></p>
+<h3 id="Route-Parameters"><a href="#Route-Parameters" class="headerlink" title="Route Parameters"></a>Route Parameters</h3><h4 id="Required-Parameters"><a href="#Required-Parameters" class="headerlink" title="Required Parameters"></a>Required Parameters</h4><p>我们输入的地址中可能有可以利用的字段，将此字段作为参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;user/&#123;id&#125;/&#123;name&#125;&apos;,function($id = 1,$name = &apos;LMZ&apos;)&#123;</div><div class="line">    return &apos;user &apos; .$id .&apos; name &apos; .$comment ;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="Optional-Parameters"><a href="#Optional-Parameters" class="headerlink" title="Optional Parameters"></a>Optional Parameters</h4><p>参数值有默认，你可以选择输入新的参数值或者不输入。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;user/&#123;name?&#125;&apos;,function($name = &apos;Lmz&apos;)&#123;</div><div class="line">    return $name;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="Regular-Expression-Constraints"><a href="#Regular-Expression-Constraints" class="headerlink" title="Regular Expression Constraints"></a>Regular Expression Constraints</h4><p>可以对输入参数进行限制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;user/&#123;id&#125;/&#123;name&#125;&apos;,function($id = 1,$name = &apos;LMZ&apos;)&#123;</div><div class="line">    return &apos;user &apos; .$id .&apos; name &apos; .&apos;is &apos; .$name ;</div><div class="line">&#125;)</div><div class="line">-&gt;where([&apos;id&apos; =&gt; &apos;[0-9]+&apos;, &apos;name&apos; =&gt; &apos;[a-z]+&apos;]);</div></pre></td></tr></table></figure></p>
+<h4 id="Global-Constraints"><a href="#Global-Constraints" class="headerlink" title="Global Constraints"></a>Global Constraints</h4><p>为每一个路由的参数都设置正则限制有点冗余，可以设置全局的正则限制。</p>
+<blockquote>
+<p>If you would like a route parameter to always be constrained by a given regular expression, you may use the pattern method. You should define these patterns in the boot method of your RouteServiceProvider</p>
+</blockquote>
+<h3 id="Named-Routes"><a href="#Named-Routes" class="headerlink" title="Named Routes"></a>Named Routes</h3><p>没看懂</p>
+<blockquote>
+<p>Named routes allow the convenient generation of URLs or redirects for specific routes. You may specify a name for a route using the as array key when defining the route.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(‘user/member-center’,[&apos;as&apos; =&gt; &apos;center&apos;,function()&#123;</div><div class="line">    return route(&apos;center&apos;);</div><div class="line">&#125;])；</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>将会返回完整的链接。<br>好处在于：路径变化了，return的结果也跟着变。</p>
+<h3 id="Route-Groups"><a href="#Route-Groups" class="headerlink" title="Route Groups"></a>Route Groups</h3><blockquote>
+<p>Route groups allow you to share route attributes, such as middleware or namespaces, across a large number of routes without needing to define those attributes on each individual route. </p>
+</blockquote>
+<p>为路由的共有属性设置，而不用每次重复设置。</p>
+<h2 id="HTTP-Middleware"><a href="#HTTP-Middleware" class="headerlink" title="HTTP Middleware"></a>HTTP Middleware</h2><blockquote>
+<p>HTTP middleware provide a convenient mechanism for filtering HTTP requests entering your application. </p>
+</blockquote>
+<p>这个定义不是很准确。下面的这个更好。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HTTP middleware provide a convenient mechanism for tackling HTTP requests entering your application and HTTP responses leaving your application.</div></pre></td></tr></table></figure></p>
+<p>中间件是在网站和浏览器之间的层。可对请求和响应做出过滤处理。</p>
+<blockquote>
+<p>Whether a middleware runs before or after a request depends on the middleware itself.</p>
+</blockquote>
+<p>中间件可以在请求之前做出反应也可以在响应之后做出反应。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Middleware;</div><div class="line"></div><div class="line">use Closure;</div><div class="line"></div><div class="line">class BeforeMiddleware</div><div class="line">&#123;</div><div class="line">    public function handle($request, Closure $next)</div><div class="line">    &#123;</div><div class="line">        // Perform action</div><div class="line"></div><div class="line">        return $next($request);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">----------------------------------------------------------------------------------</div><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Middleware;</div><div class="line"></div><div class="line">use Closure;</div><div class="line"></div><div class="line">class AfterMiddleware</div><div class="line">&#123;</div><div class="line">    public function handle($request, Closure $next)</div><div class="line">    &#123;</div><div class="line">        $response = $next($request);</div><div class="line"></div><div class="line">        // Perform action</div><div class="line"></div><div class="line">        return $response;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>中间件发挥作用必须加入路由之中。<br>第一步：为中间件取一个名字<br>第二步：为路由赋予中间件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// Within App\Http\Kernel Class...</div><div class="line"></div><div class="line">protected $routeMiddleware = [</div><div class="line">    &apos;auth&apos; =&gt; \App\Http\Middleware\Authenticate::class,</div><div class="line">    &apos;auth.basic&apos; =&gt; \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,</div><div class="line">    &apos;guest&apos; =&gt; \App\Http\Middleware\RedirectIfAuthenticated::class,</div><div class="line">    &apos;throttle&apos; =&gt; \Illuminate\Routing\Middleware\ThrottleRequests::class,</div><div class="line">];</div><div class="line">----------------------------------------------------------------------------------</div><div class="line">Route::get(&apos;admin/profile&apos;, [&apos;middleware&apos; =&gt; &apos;auth&apos;, function () &#123;</div><div class="line">    //</div><div class="line">&#125;]);</div></pre></td></tr></table></figure></p>
+<h2 id="HTTP-Controllers"><a href="#HTTP-Controllers" class="headerlink" title="HTTP Controllers"></a>HTTP Controllers</h2><blockquote>
+<p>Instead of defining all of your request handling logic in a single routes.php file, you may wish to organize this behavior using Controller classes. Controllers can group related HTTP request handling logic into a class. Controllers are stored in the app/Http/Controllers directory.</p>
+</blockquote>
+<p>在路由中有一个函数用来处理请求，这个处理函数可以写在控制器当中。<br>所有的处理函数都写在控制器类中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">use App\User;</div><div class="line">use App\Http\Controllers\Controller;</div><div class="line"></div><div class="line">class UserController extends Controller</div><div class="line">&#123;</div><div class="line">    /**</div><div class="line">     * Show the profile for the given user.</div><div class="line">     *</div><div class="line">     * @param  int  $id</div><div class="line">     * @return Response</div><div class="line">     */</div><div class="line">    public function showProfile($id)</div><div class="line">    &#123;</div><div class="line">        return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; User::findOrFail($id)]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">----------------------------------------------------------------------------------</div><div class="line">Route::get(&apos;user/&#123;id&#125;&apos;, &apos;UserController@showProfile&apos;);</div></pre></td></tr></table></figure></p>
+<p>写控制器的步骤：<br>在Http/Controller文件夹下新建<code>MemberController.php</code>文件，注意命名空间和继承的基类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">class MemberController extends Controller</div><div class="line">&#123;</div><div class="line">    public function info($id)</div><div class="line">    &#123;</div><div class="line">        return &apos;member-info-id-&apos;.$id;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>添加路由：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;member/&#123;id&#125;&apos;,&apos;MemberController@info&apos;)</div><div class="line">-&gt;where(&apos;id&apos;,&apos;[0-9]+&apos;);</div></pre></td></tr></table></figure></p>
+<h2 id="HTTP-Requests"><a href="#HTTP-Requests" class="headerlink" title="HTTP Requests"></a>HTTP Requests</h2><p>Accessing The Request<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">use Illuminate\Http\Request;//一个类</div><div class="line"></div><div class="line">class UserController extends Controller</div><div class="line">&#123;</div><div class="line">    public function store(Request $request)//类实例做参数</div><div class="line">    &#123;</div><div class="line">        $name = $request-&gt;input(&apos;name&apos;);//对象的方法</div><div class="line"></div><div class="line">        //</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="HTTP-Responses"><a href="#HTTP-Responses" class="headerlink" title="HTTP Responses"></a>HTTP Responses</h2><p>Response Objects<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">use Illuminate\Http\Response;</div><div class="line"></div><div class="line">Route::get(&apos;home&apos;, function () &#123;</div><div class="line">    return (new Response($content, $status))</div><div class="line">                  -&gt;header(&apos;Content-Type&apos;, $value);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>For convenience, you may also use the response helper:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;home&apos;, function () &#123;</div><div class="line">    return response($content, $status)</div><div class="line">                  -&gt;header(&apos;Content-Type&apos;, $value);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="Views"><a href="#Views" class="headerlink" title="Views"></a>Views</h2><blockquote>
+<p>Views contain the HTML served by your application and separate your controller / application logic from your presentation logic. Views are stored in the resources/views directory.</p>
+</blockquote>
+<p>A simple view might look something like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!-- View stored in resources/views/greeting.php --&gt;</div><div class="line"></div><div class="line">&lt;html&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;&lt;/h1&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>Since this view is stored at <code>resources/views/greeting.php</code>, we may return it using the global <code>view</code> helper function like so:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;/&apos;, function () &#123;</div><div class="line">    return view(&apos;greeting&apos;, [&apos;name&apos; =&gt; &apos;James&apos;]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>一个控制器对应一个文件夹。</p>
+<h2 id="Blade-Templates"><a href="#Blade-Templates" class="headerlink" title="Blade Templates"></a>Blade Templates</h2><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p>如何新建模型？<br>模型在app目录下，新建Member.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App;</div><div class="line"></div><div class="line">use Illuminate\Database\Eloquent\Model;</div><div class="line"></div><div class="line">class Member extends Model</div><div class="line">&#123;</div><div class="line">    public static function getMember()</div><div class="line">    &#123;</div><div class="line">        return &apos;llllllllllllll&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>怎样调用模型？<br>模型也是被控制器调用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">use App\Member;</div><div class="line"></div><div class="line">class MemberController extends Controller</div><div class="line">&#123;</div><div class="line">    public function info()</div><div class="line">    &#123;</div><div class="line">         return    Member::getMember();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="数据库操作之-DB-facade"><a href="#数据库操作之-DB-facade" class="headerlink" title="数据库操作之　DB facade"></a>数据库操作之　DB facade</h2><p>用PhpMyAdmin新建数据库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE IF NOT EXISTS student(</div><div class="line">  id INT AUTO_INCREMENT PRIMARY KEY,</div><div class="line">  name VARCHAR(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;姓名&apos;,</div><div class="line">  age TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;年龄&apos;,</div><div class="line">  sex TINYINT UNSIGNED NOT NULL DEFAULT 10 COMMENT &apos;性别&apos;,</div><div class="line">  created_at INT NOT NULL DEFAULT 0 COMMENT &apos;新增时间&apos;,</div><div class="line">  updated_at INT NOT NULL DEFAULT 0 COMMENT &apos;修改时间&apos;</div><div class="line">) ENGINE = InnoDB DEFAULT CHARSET = UTF8 AUTO_INCREMENT = 1001 COMMENT = &apos;学生表&apos;;</div></pre></td></tr></table></figure></p>
+<p>关联数据库：<br>数据库的配置文件在config/database.php里面<br>我们修改vendor/.env文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DB_HOST=localhost</div><div class="line">DB_DATABASE=laravel</div><div class="line">DB_USERNAME=root</div><div class="line">DB_PASSWORD=1</div></pre></td></tr></table></figure></p>
+<p>如何操作数据库<br>新建StudentController.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">namespace App\Http\Controllers;</div><div class="line">use Illuminate\Support\Facades\DB;</div><div class="line">class StudentController extends Controller</div><div class="line"> &#123;</div><div class="line">     public function test1()</div><div class="line">     &#123;</div><div class="line">         $students = DB::select(&apos;select * from student&apos;);</div><div class="line">         dd($students);</div><div class="line"></div><div class="line">//       $bool = DB::insert(&apos;insert into student(name,age) values(?,?)&apos;,[&apos;lwx&apos;,18]);</div><div class="line">//       var_dump($bool);</div><div class="line"></div><div class="line">     &#125;</div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>添加路由。</p>
+<h2 id="数据库操作之-查询构造器"><a href="#数据库操作之-查询构造器" class="headerlink" title="数据库操作之　查询构造器"></a>数据库操作之　查询构造器</h2><p>比上面的方法简便，还可以防止sql注入</p>
+<h2 id="数据库操作之-Eloquent-ORM"><a href="#数据库操作之-Eloquent-ORM" class="headerlink" title="数据库操作之　Eloquent ORM"></a>数据库操作之　Eloquent ORM</h2><h2 id="Blade模板引擎"><a href="#Blade模板引擎" class="headerlink" title="Blade模板引擎"></a>Blade模板引擎</h2><p>tags:back-end</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/10/15/laravel/" data-title="Deep Thinking" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/10/11/google_search/"  title="Google 搜索技巧">
+ <strong>下一篇：</strong><br/> 
+ <span>Google 搜索技巧
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#laravel"><span class="toc-number">1.</span> <span class="toc-text">laravel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LAMP环境配置以及部署到apache2"><span class="toc-number">2.</span> <span class="toc-text">LAMP环境配置以及部署到apache2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MVC"><span class="toc-number">3.</span> <span class="toc-text">MVC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Routing"><span class="toc-number">4.</span> <span class="toc-text">HTTP Routing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Routing"><span class="toc-number">4.1.</span> <span class="toc-text">Basic Routing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Route-Parameters"><span class="toc-number">4.2.</span> <span class="toc-text">Route Parameters</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Required-Parameters"><span class="toc-number">4.2.1.</span> <span class="toc-text">Required Parameters</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Optional-Parameters"><span class="toc-number">4.2.2.</span> <span class="toc-text">Optional Parameters</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Regular-Expression-Constraints"><span class="toc-number">4.2.3.</span> <span class="toc-text">Regular Expression Constraints</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Global-Constraints"><span class="toc-number">4.2.4.</span> <span class="toc-text">Global Constraints</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Named-Routes"><span class="toc-number">4.3.</span> <span class="toc-text">Named Routes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Route-Groups"><span class="toc-number">4.4.</span> <span class="toc-text">Route Groups</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Middleware"><span class="toc-number">5.</span> <span class="toc-text">HTTP Middleware</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Controllers"><span class="toc-number">6.</span> <span class="toc-text">HTTP Controllers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Requests"><span class="toc-number">7.</span> <span class="toc-text">HTTP Requests</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-Responses"><span class="toc-number">8.</span> <span class="toc-text">HTTP Responses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Views"><span class="toc-number">9.</span> <span class="toc-text">Views</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blade-Templates"><span class="toc-number">10.</span> <span class="toc-text">Blade Templates</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model"><span class="toc-number">11.</span> <span class="toc-text">Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库操作之-DB-facade"><span class="toc-number">12.</span> <span class="toc-text">数据库操作之　DB facade</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库操作之-查询构造器"><span class="toc-number">13.</span> <span class="toc-text">数据库操作之　查询构造器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库操作之-Eloquent-ORM"><span class="toc-number">14.</span> <span class="toc-text">数据库操作之　Eloquent ORM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blade模板引擎"><span class="toc-number">15.</span> <span class="toc-text">Blade模板引擎</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.economist.com/" target="_blank" title="Economist">Economist</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://www.scotthyoung.com/blog/articles/" target="_blank" title="Scott H.Young">Scott H.Young</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://b.xinshengdaxue.com/" target="_blank" title="Xinshengdaxue">Xinshengdaxue</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://xiaolai.li/archives/" target="_blank" title="Li Xiaolai">Li Xiaolai</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://zhibimo.com/explore/books" target="_blank" title="Zhibimo">Zhibimo</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://cn.linux.vbird.org/linux_basic/linux_basic.php" target="_blank" title="Vbird-basic">Vbird-basic</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://cn.linux.vbird.org/linux_server/" target="_blank" title="Vbird-server">Vbird-server</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Stay hungry ,stay foolish. <br/>
+			Stay young ,stay naive.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Liu muzhi">Liu muzhi</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

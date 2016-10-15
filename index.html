@@ -78,6 +78,117 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/10/15/laravel/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
+		
+  <p class="article-time">
+    <time datetime="2016-10-15T08:06:03.646Z" itemprop="datePublished"> 发表于 2016-10-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <hr>
+<h2 id="laravel"><a href="#laravel" class="headerlink" title="laravel"></a>laravel</h2><p>[toc]</p>
+<h2 id="LAMP环境配置以及部署到apache2"><a href="#LAMP环境配置以及部署到apache2" class="headerlink" title="LAMP环境配置以及部署到apache2"></a>LAMP环境配置以及部署到apache2</h2><ul>
+<li><a href="http://www.jianshu.com/p/4933184d35cd" target="_blank" rel="external">Ubuntu 16 安装Laravel开发环境</a></li>
+<li><a href="http://www.golaravel.com/download/" target="_blank" rel="external">Laravel &amp; Lumen 一键安装包下载</a></li>
+<li><a href="http://tecadmin.net/install-laravel-framework-on-ubuntu/#" target="_blank" rel="external">Create Apache VirtualHost</a></li>
+<li><a href="http://blog.csdn.net/qq_28666081/article/details/51335255" target="_blank" rel="external">chmod -R 777 storage</a></li>
+</ul>
+<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><p>mvc的一个很好的举例是：客户、服务员、厨师。</p>
+<h2 id="HTTP-Routing"><a href="#HTTP-Routing" class="headerlink" title="HTTP Routing"></a>HTTP Routing</h2><h3 id="Basic-Routing"><a href="#Basic-Routing" class="headerlink" title="Basic Routing"></a>Basic Routing</h3><blockquote>
+<p>The most basic Laravel routes simply accept a URI and a Closure, providing a very simple and expressive method of defining routes.</p>
+</blockquote>
+<p>我们搜索网站的时候需要更详细的资源地址。Route提供了这些地址。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Route::method($uri,$callback)</div></pre></td></tr></table></figure></p>
+<h3 id="Route-Parameters"><a href="#Route-Parameters" class="headerlink" title="Route Parameters"></a>Route Parameters</h3><h4 id="Required-Parameters"><a href="#Required-Parameters" class="headerlink" title="Required Parameters"></a>Required Parameters</h4><p>我们输入的地址中可能有可以利用的字段，将此字段作为参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;user/&#123;id&#125;/&#123;name&#125;&apos;,function($id = 1,$name = &apos;LMZ&apos;)&#123;</div><div class="line">    return &apos;user &apos; .$id .&apos; name &apos; .$comment ;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="Optional-Parameters"><a href="#Optional-Parameters" class="headerlink" title="Optional Parameters"></a>Optional Parameters</h4><p>参数值有默认，你可以选择输入新的参数值或者不输入。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;user/&#123;name?&#125;&apos;,function($name = &apos;Lmz&apos;)&#123;</div><div class="line">    return $name;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="Regular-Expression-Constraints"><a href="#Regular-Expression-Constraints" class="headerlink" title="Regular Expression Constraints"></a>Regular Expression Constraints</h4><p>可以对输入参数进行限制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;user/&#123;id&#125;/&#123;name&#125;&apos;,function($id = 1,$name = &apos;LMZ&apos;)&#123;</div><div class="line">    return &apos;user &apos; .$id .&apos; name &apos; .&apos;is &apos; .$name ;</div><div class="line">&#125;)</div><div class="line">-&gt;where([&apos;id&apos; =&gt; &apos;[0-9]+&apos;, &apos;name&apos; =&gt; &apos;[a-z]+&apos;]);</div></pre></td></tr></table></figure></p>
+<h4 id="Global-Constraints"><a href="#Global-Constraints" class="headerlink" title="Global Constraints"></a>Global Constraints</h4><p>为每一个路由的参数都设置正则限制有点冗余，可以设置全局的正则限制。</p>
+<blockquote>
+<p>If you would like a route parameter to always be constrained by a given regular expression, you may use the pattern method. You should define these patterns in the boot method of your RouteServiceProvider</p>
+</blockquote>
+<h3 id="Named-Routes"><a href="#Named-Routes" class="headerlink" title="Named Routes"></a>Named Routes</h3><p>没看懂</p>
+<blockquote>
+<p>Named routes allow the convenient generation of URLs or redirects for specific routes. You may specify a name for a route using the as array key when defining the route.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(‘user/member-center’,[&apos;as&apos; =&gt; &apos;center&apos;,function()&#123;</div><div class="line">    return route(&apos;center&apos;);</div><div class="line">&#125;])；</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>将会返回完整的链接。<br>好处在于：路径变化了，return的结果也跟着变。</p>
+<h3 id="Route-Groups"><a href="#Route-Groups" class="headerlink" title="Route Groups"></a>Route Groups</h3><blockquote>
+<p>Route groups allow you to share route attributes, such as middleware or namespaces, across a large number of routes without needing to define those attributes on each individual route. </p>
+</blockquote>
+<p>为路由的共有属性设置，而不用每次重复设置。</p>
+<h2 id="HTTP-Middleware"><a href="#HTTP-Middleware" class="headerlink" title="HTTP Middleware"></a>HTTP Middleware</h2><blockquote>
+<p>HTTP middleware provide a convenient mechanism for filtering HTTP requests entering your application. </p>
+</blockquote>
+<p>这个定义不是很准确。下面的这个更好。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HTTP middleware provide a convenient mechanism for tackling HTTP requests entering your application and HTTP responses leaving your application.</div></pre></td></tr></table></figure></p>
+<p>中间件是在网站和浏览器之间的层。可对请求和响应做出过滤处理。</p>
+<blockquote>
+<p>Whether a middleware runs before or after a request depends on the middleware itself.</p>
+</blockquote>
+<p>中间件可以在请求之前做出反应也可以在响应之后做出反应。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Middleware;</div><div class="line"></div><div class="line">use Closure;</div><div class="line"></div><div class="line">class BeforeMiddleware</div><div class="line">&#123;</div><div class="line">    public function handle($request, Closure $next)</div><div class="line">    &#123;</div><div class="line">        // Perform action</div><div class="line"></div><div class="line">        return $next($request);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">----------------------------------------------------------------------------------</div><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Middleware;</div><div class="line"></div><div class="line">use Closure;</div><div class="line"></div><div class="line">class AfterMiddleware</div><div class="line">&#123;</div><div class="line">    public function handle($request, Closure $next)</div><div class="line">    &#123;</div><div class="line">        $response = $next($request);</div><div class="line"></div><div class="line">        // Perform action</div><div class="line"></div><div class="line">        return $response;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>中间件发挥作用必须加入路由之中。<br>第一步：为中间件取一个名字<br>第二步：为路由赋予中间件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// Within App\Http\Kernel Class...</div><div class="line"></div><div class="line">protected $routeMiddleware = [</div><div class="line">    &apos;auth&apos; =&gt; \App\Http\Middleware\Authenticate::class,</div><div class="line">    &apos;auth.basic&apos; =&gt; \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,</div><div class="line">    &apos;guest&apos; =&gt; \App\Http\Middleware\RedirectIfAuthenticated::class,</div><div class="line">    &apos;throttle&apos; =&gt; \Illuminate\Routing\Middleware\ThrottleRequests::class,</div><div class="line">];</div><div class="line">----------------------------------------------------------------------------------</div><div class="line">Route::get(&apos;admin/profile&apos;, [&apos;middleware&apos; =&gt; &apos;auth&apos;, function () &#123;</div><div class="line">    //</div><div class="line">&#125;]);</div></pre></td></tr></table></figure></p>
+<h2 id="HTTP-Controllers"><a href="#HTTP-Controllers" class="headerlink" title="HTTP Controllers"></a>HTTP Controllers</h2><blockquote>
+<p>Instead of defining all of your request handling logic in a single routes.php file, you may wish to organize this behavior using Controller classes. Controllers can group related HTTP request handling logic into a class. Controllers are stored in the app/Http/Controllers directory.</p>
+</blockquote>
+<p>在路由中有一个函数用来处理请求，这个处理函数可以写在控制器当中。<br>所有的处理函数都写在控制器类中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">use App\User;</div><div class="line">use App\Http\Controllers\Controller;</div><div class="line"></div><div class="line">class UserController extends Controller</div><div class="line">&#123;</div><div class="line">    /**</div><div class="line">     * Show the profile for the given user.</div><div class="line">     *</div><div class="line">     * @param  int  $id</div><div class="line">     * @return Response</div><div class="line">     */</div><div class="line">    public function showProfile($id)</div><div class="line">    &#123;</div><div class="line">        return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; User::findOrFail($id)]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">----------------------------------------------------------------------------------</div><div class="line">Route::get(&apos;user/&#123;id&#125;&apos;, &apos;UserController@showProfile&apos;);</div></pre></td></tr></table></figure></p>
+<p>写控制器的步骤：<br>在Http/Controller文件夹下新建<code>MemberController.php</code>文件，注意命名空间和继承的基类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">class MemberController extends Controller</div><div class="line">&#123;</div><div class="line">    public function info($id)</div><div class="line">    &#123;</div><div class="line">        return &apos;member-info-id-&apos;.$id;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>添加路由：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;member/&#123;id&#125;&apos;,&apos;MemberController@info&apos;)</div><div class="line">-&gt;where(&apos;id&apos;,&apos;[0-9]+&apos;);</div></pre></td></tr></table></figure></p>
+<h2 id="HTTP-Requests"><a href="#HTTP-Requests" class="headerlink" title="HTTP Requests"></a>HTTP Requests</h2><p>Accessing The Request<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">use Illuminate\Http\Request;//一个类</div><div class="line"></div><div class="line">class UserController extends Controller</div><div class="line">&#123;</div><div class="line">    public function store(Request $request)//类实例做参数</div><div class="line">    &#123;</div><div class="line">        $name = $request-&gt;input(&apos;name&apos;);//对象的方法</div><div class="line"></div><div class="line">        //</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="HTTP-Responses"><a href="#HTTP-Responses" class="headerlink" title="HTTP Responses"></a>HTTP Responses</h2><p>Response Objects<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">use Illuminate\Http\Response;</div><div class="line"></div><div class="line">Route::get(&apos;home&apos;, function () &#123;</div><div class="line">    return (new Response($content, $status))</div><div class="line">                  -&gt;header(&apos;Content-Type&apos;, $value);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>For convenience, you may also use the response helper:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;home&apos;, function () &#123;</div><div class="line">    return response($content, $status)</div><div class="line">                  -&gt;header(&apos;Content-Type&apos;, $value);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="Views"><a href="#Views" class="headerlink" title="Views"></a>Views</h2><blockquote>
+<p>Views contain the HTML served by your application and separate your controller / application logic from your presentation logic. Views are stored in the resources/views directory.</p>
+</blockquote>
+<p>A simple view might look something like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!-- View stored in resources/views/greeting.php --&gt;</div><div class="line"></div><div class="line">&lt;html&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;&lt;/h1&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>Since this view is stored at <code>resources/views/greeting.php</code>, we may return it using the global <code>view</code> helper function like so:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Route::get(&apos;/&apos;, function () &#123;</div><div class="line">    return view(&apos;greeting&apos;, [&apos;name&apos; =&gt; &apos;James&apos;]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>一个控制器对应一个文件夹。</p>
+<h2 id="Blade-Templates"><a href="#Blade-Templates" class="headerlink" title="Blade Templates"></a>Blade Templates</h2><h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p>如何新建模型？<br>模型在app目录下，新建Member.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App;</div><div class="line"></div><div class="line">use Illuminate\Database\Eloquent\Model;</div><div class="line"></div><div class="line">class Member extends Model</div><div class="line">&#123;</div><div class="line">    public static function getMember()</div><div class="line">    &#123;</div><div class="line">        return &apos;llllllllllllll&apos;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>怎样调用模型？<br>模型也是被控制器调用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"></div><div class="line">namespace App\Http\Controllers;</div><div class="line"></div><div class="line">use App\Member;</div><div class="line"></div><div class="line">class MemberController extends Controller</div><div class="line">&#123;</div><div class="line">    public function info()</div><div class="line">    &#123;</div><div class="line">         return    Member::getMember();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="数据库操作之-DB-facade"><a href="#数据库操作之-DB-facade" class="headerlink" title="数据库操作之　DB facade"></a>数据库操作之　DB facade</h2><p>用PhpMyAdmin新建数据库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE IF NOT EXISTS student(</div><div class="line">  id INT AUTO_INCREMENT PRIMARY KEY,</div><div class="line">  name VARCHAR(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;姓名&apos;,</div><div class="line">  age TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT &apos;年龄&apos;,</div><div class="line">  sex TINYINT UNSIGNED NOT NULL DEFAULT 10 COMMENT &apos;性别&apos;,</div><div class="line">  created_at INT NOT NULL DEFAULT 0 COMMENT &apos;新增时间&apos;,</div><div class="line">  updated_at INT NOT NULL DEFAULT 0 COMMENT &apos;修改时间&apos;</div><div class="line">) ENGINE = InnoDB DEFAULT CHARSET = UTF8 AUTO_INCREMENT = 1001 COMMENT = &apos;学生表&apos;;</div></pre></td></tr></table></figure></p>
+<p>关联数据库：<br>数据库的配置文件在config/database.php里面<br>我们修改vendor/.env文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DB_HOST=localhost</div><div class="line">DB_DATABASE=laravel</div><div class="line">DB_USERNAME=root</div><div class="line">DB_PASSWORD=1</div></pre></td></tr></table></figure></p>
+<p>如何操作数据库<br>新建StudentController.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">namespace App\Http\Controllers;</div><div class="line">use Illuminate\Support\Facades\DB;</div><div class="line">class StudentController extends Controller</div><div class="line"> &#123;</div><div class="line">     public function test1()</div><div class="line">     &#123;</div><div class="line">         $students = DB::select(&apos;select * from student&apos;);</div><div class="line">         dd($students);</div><div class="line"></div><div class="line">//       $bool = DB::insert(&apos;insert into student(name,age) values(?,?)&apos;,[&apos;lwx&apos;,18]);</div><div class="line">//       var_dump($bool);</div><div class="line"></div><div class="line">     &#125;</div><div class="line"></div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>添加路由。</p>
+<h2 id="数据库操作之-查询构造器"><a href="#数据库操作之-查询构造器" class="headerlink" title="数据库操作之　查询构造器"></a>数据库操作之　查询构造器</h2><p>比上面的方法简便，还可以防止sql注入</p>
+<h2 id="数据库操作之-Eloquent-ORM"><a href="#数据库操作之-Eloquent-ORM" class="headerlink" title="数据库操作之　Eloquent ORM"></a>数据库操作之　Eloquent ORM</h2><h2 id="Blade模板引擎"><a href="#Blade模板引擎" class="headerlink" title="Blade模板引擎"></a>Blade模板引擎</h2><p>tags:back-end</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/10/11/google_search/" title="Google 搜索技巧" itemprop="url">Google 搜索技巧</a>
   </h1>
   <p class="article-author">By
@@ -962,116 +1073,6 @@ print s
 <p>ctrl+w+w 光标移到下一个屏</p>
 </blockquote>
 <p>标签：vim</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/10/09/linux_command/" title="linux命令行" itemprop="url">linux命令行</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Liu muzhi" target="_blank" itemprop="author">Liu muzhi</a>
-		
-  <p class="article-time">
-    <time datetime="2016-10-09T08:18:53.083Z" itemprop="datePublished"> 发表于 2016-10-09</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>[toc]</p>
-<h3 id="bash命令"><a href="#bash命令" class="headerlink" title="bash命令"></a>bash命令</h3><ul>
-<li>==<code>uname -a</code>Show system and kernel==</li>
-<li>==<code>whoami</code>Show your username==</li>
-<li><code>mount</code>Show mounted filesystems</li>
-</ul>
-<h3 id="前台后台-fg-bg"><a href="#前台后台-fg-bg" class="headerlink" title="前台后台 fg/bg"></a>前台后台 fg/bg</h3><p>有些命令执行很花时间，我们可以将其放在后台执行。</p>
-<ul>
-<li>在命令的结尾加上<code>&amp;</code></li>
-<li>执行完命令后，输入<code>ctrl+z</code>或者<code>bg</code></li>
-</ul>
-<p>如何将后台程序调入前台呢？</p>
-<ul>
-<li>执行命令<code>jobs</code>，列出所有后台命令</li>
-<li>fg %进程id,eg:<code>fg %2</code></li>
-</ul>
-<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><ul>
-<li><code>ps</code>最基础的浏览进程的命令。常用的是<code>ps -aux</code></li>
-<li><code>pstree</code>每个进程都是由父进程创建的，可视化显示进程间的关系。指定了进程号，那么根进程就是该进程。没有指定，根进程是<code>init</code>，pid=1</li>
-<li><code>top</code>实时显示系统的进程状态</li>
-<li><code>ps</code> Show snapshot of processes</li>
-<li><code>top</code> Show real time processes</li>
-<li><code>kill pid</code> Kill process with id pid</li>
-<li>==<code>pkill name</code> Kill process with name name==</li>
-<li>==<code>killall name</code> Kill all processes with names beginning name==</li>
-</ul>
-<h3 id="杀死进程"><a href="#杀死进程" class="headerlink" title="杀死进程"></a>杀死进程</h3><ul>
-<li><code>kill pid</code>杀死某个进程</li>
-<li><code>kill -9 pid</code>强制杀死。慎用。没有机会清理现场，比如，文件可能没有写完</li>
-</ul>
-<h3 id="查找命令"><a href="#查找命令" class="headerlink" title="查找命令"></a>查找命令</h3><ul>
-<li>==<code>find</code>最强大的查找命令。格式：<code>find &lt;指定目录&gt; &lt;指定条件&gt; &lt;指定动作&gt;</code>。举例：<code>find . -name &#39;my*&#39; -ls</code>==</li>
-<li>==<code>locate</code>查找速度比<code>find</code>快，但是查找不到最近更新的文件，可以预先执行<code>updatedb</code>。eg:<code>locate /etc/sh</code>搜索etc目录下所有以sh开头的文件。==</li>
-<li><code>which</code>在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。</li>
-</ul>
-<h3 id="命令列表"><a href="#命令列表" class="headerlink" title="命令列表"></a>命令列表</h3><ul>
-<li>==<code>cmd1 ; cmd2</code>Run cmd1 then cmd2==</li>
-<li><code>cmd1 &amp;&amp; cmd2</code>Run cmd2 if cmd1 is successful</li>
-<li><code>cmd1 || cmd2</code>Run cmd2 if cmd1 is not successful</li>
-<li><code>cmd &amp;</code>Run cmd in a subshell</li>
-</ul>
-<h3 id="管道命令"><a href="#管道命令" class="headerlink" title="管道命令"></a>管道命令</h3><ul>
-<li><code>cmd1 | cmd2</code>stdout of cmd1 to cmd2</li>
-<li>==<code>cmd1 |&amp; cmd2</code>stderr of cmd1 to cmd2==</li>
-</ul>
-<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1&gt; ：以覆盖的方法将『正确的数据』输出到指定的文件或装置上；</div><div class="line">1&gt;&gt;：以累加的方法将『正确的数据』输出到指定的文件或装置上；</div><div class="line">2&gt; ：以覆盖的方法将『错误的数据』输出到指定的文件或装置上；</div><div class="line">2&gt;&gt;：以累加的方法将『错误的数据』输出到指定的文件或装置上；</div></pre></td></tr></table></figure>
-<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><ul>
-<li><code>touch file</code>Create file</li>
-<li><code>cat file1 file2</code>Concatenate files and output</li>
-<li><code>less file</code>View and paginate file</li>
-<li>==<code>file file</code>Get type of file==</li>
-</ul>
-<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><h3 id="bash变量"><a href="#bash变量" class="headerlink" title="bash变量"></a>bash变量</h3><ul>
-<li>==<code>env</code>Show environment variables==</li>
-<li><code>echo $NAME</code>Output value of $NAME variable</li>
-<li>==<code>export NAME=value</code>Set $NAME to value==</li>
-<li><code>$PATH</code>Executable search path</li>
-<li><code>$HOME</code>Home directory</li>
-<li><code>$SHELL</code>Current shell</li>
-</ul>
-<p>标签：linux</p>
 
         
         
